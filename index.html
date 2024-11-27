@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandeep's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f0f4f8;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0077b6, #00b4d8);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-top: 20px;
+            border: 8px solid white;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            margin: 20px 0 10px;
+            font-size: 2.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.8em;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffdd57;
+        }
+
+        /* Main Sections */
+        section {
+            padding: 60px 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #0077b6;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 100px;
+            height: 5px;
+            background-color: #00b4d8;
+            display: block;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .skill-item {
+            background-color: #00b4d8;
+            color: white;
+            padding: 20px 30px;
+            margin: 10px;
+            border-radius: 15px;
+            font-size: 1.3em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            background-color: #0077b6;
+        }
+
+        /* Experience and Projects */
+        .card {
+            background-color: white;
+            padding: 30px;
+            margin: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: #0077b6;
+            font-size: 1.7em;
+            margin-bottom: 15px;
+        }
+
+        .card ul, .card p {
+            font-size: 1.2em;
+            line-height: 1.7;
+        }
+
+        /* Projects Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0077b6;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1.2em;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            .skill-item {
+                font-size: 1.1em;
+                padding: 15px 20px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .card h3 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="passport.jpg" alt="Sandeep" class="profile-pic">
+        <h1>Chekkala Sandeep Reddy</h1>
+        <p>Undergrad @IIT Palakkad | Competitive Programmer | Problem Solver</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/chekkala-sandeep-reddy/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/CodeCraftsmanSandeep" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </header>
+
+<!-- About Me Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            Hi there! 👋 I'm an <strong>undergraduate student</strong> at <strong>IIT Palakkad</strong>, majoring in <strong>Computer Science and Engineering</strong> 🎓.  
+            My current research focuses on <strong>high-performance accelerated computing</strong> on GPUs using CUDA, leveraging NVIDIA's parallel programming platform.  
+            I'm also passionate about <strong>competitive programming</strong> 🧩 and regularly participate in contests while solving <strong>data structures and algorithms</strong> problems 💻.  
+            I love working on exciting projects and am always open to <strong>collaboration!</strong>🤝  
+            Feel free to <strong>reach out</strong> if you'd like to work together. 😊
+        </p>
+    </div>
+</section>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">C++</div>
+            <div class="skill-item">Python</div>
+            <div class="skill-item">CUDA C++</div>
+            <div class="skill-item">PostgreSQL</div>
+            <div class="skill-item">NodeJS</div>
+            <div class="skill-item">GitLab CI/CD</div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="card">
+            <h3>Bachelor of Technology (B.Tech) in Computer Science</h3>
+            <p>Indian Institute of Technology (IIT) Palakkad | CGPA: 8.71/10 | Expected 2025</p>
+        </div>
+        <div class="card">
+            <h3>Class XII</h3>
+            <p>Trividya Junior College | Marks: 990/1000 | 2021</p>
+        </div>
+        <div class="card">
+            <h3>Class X</h3>
+            <p>Bhashyam High School | CGPA: 10/10 | 2019</p>
+        </div>
+    </section>
+
+<!-- Work Experience Section -->
+<section id="experience">
+    <h2>Work Experience</h2>
+    
+    <div class="card">
+        <h3>DevOps Engineer Intern</h3>
+        <p>
+            Bank of New York (BNY) | Internship | May 2024 - July 2024 | Chennai, India
+        </p>
+        <p>
+            In my role as a DevOps Engineer Intern at Bank of New York (BNY), I optimized platform performance by developing Python scripts that analyzed and removed redundant data in JFrog Artifactory, reducing server load by 10%. I implemented automated Python scripts in pipelines to generate regular platform health reports, enhancing data consistency and system reliability between TPC and CNJ servers. Additionally, I worked with shell scripting, GitLab CI/CD, Python, JFrog Artifactory, and SonarQube to streamline development workflows and enhance platform performance.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Coding Tutor</h3>
+        <p>
+            CodeKaroYaaro - International Kids Coding School | Internship | Mar 2023 - Jun 2023 | Maharashtra, India (Remote)
+        </p>
+        <p>
+            In my role as a Coding Tutor at CodeKaroYaaro, I enhanced my programming and debugging skills while deepening my understanding of programming fundamentals, particularly in Python and C++. Teaching young learners not only strengthened my knowledge but also improved my ability to explain complex concepts in a clear and engaging manner.
+        </p>
+    </div>
+</section>
+
+
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <h2>Achievements & Milestones</h2>
+        <div class="card">
+            <ul>
+                <p>Solved over 1,800+ problems data structures and algorithms and competetive programming problems across multiple platforms.</p>
+                <p>Ranked 63rd in CodeChef Starters 154 contest and 73rd in Starters 149 contest.</p>
+                <p>Top problem solver at IIT Palakkad, winning 1st place in programming contests.</p>
+                <p>Ranked in top 3.05% in JEE ADVANCED and top 0.73% in JEE Mains 2021 at the national level.</p>
+                <p>Recipient of Panasonic India Scholarship in 2021.</p>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Ongoing Research Section -->
+    <section id="research">
+        <h2>Ongoing Research</h2>
+        <div class="card">
+            <h3>GPU Programming: Accelerating Algorithms with Parallelism</h3>
+            <p>
+                Our research focuses on accelerating well-known algorithms by harnessing the power of <strong>GPU parallelism</strong>.
+                We are focusing on optimizing reduction operations for large arrays (size ≥ 10<sup>8</sup>) using <strong>CUDA programming</strong>, already achieving an impressive <strong>15% speedup</strong> compared to NVIDIA’s Thrust library.  
+                This performance gain was made possible through innovative strategies, and we are excited to publish our findings in upcoming research papers. 📄
+            </p>
+            <p>
+                Currently, we are also working on optimizing the <strong>PageRank algorithm</strong>, pushing the boundaries of <strong>high-performance computing</strong> on GPUs. 💡  
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>Octopus: A Mini GitHub Version Control Platform</h3>
+                <p>Cloud-based collaboration platform with version control and user management features.</p>
+                <a href="https://github.com/CodeCraftsmanSandeep/Octopus" target="_blank">View on GitHub</a>
+            </div>
+            <div class="card">
+                <h3>Skip List in C++</h3>
+                <p>An optimized Skip List data structure in C++, designed to outperform `std::set` for certain operations.</p>
+                <a href="https://github.com/CodeCraftsmanSandeep/advanced_data_structure-skip_lists" target="_blank">View on GitHub</a>
+            </div>
+            <div class="card">
+                <h3>RISC-V Processor</h3>
+                <p>Designed and implemented a 5-stage RISC-V processor using Verilog.</p>
+                <a href="https://github.com/CodeCraftsmanSandeep/RISC-V" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Visitor Count -->
+    <footer>
+        <p>Visitor Count: <span id="visitorCount">Loading...</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
