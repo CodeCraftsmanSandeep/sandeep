@@ -9,12 +9,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
             color: #333;
             background-color: #f0f4f8;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        p {
+            font-family: 'Lora', serif;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
         }
 
         /* Header */
@@ -154,6 +168,29 @@
         footer p {
             font-size: 1.2em;
         }
+        
+        #achievements .card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+            font-family: 'Montserrat', sans-serif; /* Matching font */
+        }
+
+        .achievement {
+            font-size: 1.2rem; /* Increased for better readability */
+            line-height: 1.7;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif; /* Matching font */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
 
         /* Media Queries */
         @media (max-width: 768px) {
@@ -191,15 +228,62 @@
 </head>
 <body>
     <header>
-        <img src="passport.jpg" alt="Sandeep" class="profile-pic">
-        <h1>Chekkala Sandeep Reddy</h1>
-        <p>Undergrad @IIT Palakkad | Competitive Programming | GPU Programming </p>
+        <img src="pictures/pic1.jpg" alt="Sandeep" class="profile-pic" id="profile-pic">
+        <h1 id="name"></h1>
+        <p id="description" style="color: #9e19b6; font-weight: bold; font-size: 18px; font-family: Arial, sans-serif; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);"></p>
+    
         <div class="social-links">
             <a href="https://www.linkedin.com/in/chekkala-sandeep-reddy/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/CodeCraftsmanSandeep" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </header>
-
+    
+    <script>
+        // Array of image paths
+        const images = [
+            "pictures/pic1.jpg",
+            "pictures/pic2.jpg",
+            "pictures/pic3.jpg",
+        ];
+    
+        let currentIndex = 0;
+        const profilePic = document.getElementById("profile-pic");
+    
+        function rotateImage() {
+            currentIndex = (currentIndex + 1) % images.length;  // Increment index cyclically
+            profilePic.src = images[currentIndex];  // Change the source of the image
+        }
+    
+        // Rotate the image every 3 seconds (3000ms)
+        setInterval(rotateImage, 3000);
+    </script>
+    
+    
+    <script>
+        function typeText(element, text, speed, callback) {
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else if (callback) {
+                    setTimeout(callback, 500);
+                }
+            }
+            type();
+        }
+        
+        window.onload = function() {
+            const nameElement = document.getElementById("name");
+            const descriptionElement = document.getElementById("description");
+            
+            typeText(nameElement, "Chekkala Sandeep Reddy", 100, function() {
+                typeText(descriptionElement, "5⭐ @CodeChef 👨‍🍳 | Ex-SWE Intern @BNY 💼 | Ex-Project Intern @ISRO 🛰️ | B.Tech CSE @IIT Palakkad 🎓", 50);
+            });
+        };
+    </script>
+    
 <!-- About Me Section -->
 <section id="about">
     <h2>About Me</h2>
@@ -209,11 +293,10 @@
             My current research focuses on <strong>high-performance accelerated computing</strong> on GPUs using CUDA, leveraging NVIDIA's parallel programming platform.  
             I'm also passionate about <strong>competitive programming</strong> 🧩 and regularly participate in contests while solving <strong>data structures and algorithms</strong> problems 💻.  
             I love working on exciting projects and am always open to <strong>collaboration!</strong>🤝  
-            Feel free to <strong>reach out</strong> if you'd like to work together. 😊
+            Feel free to <strong>reach out</strong> if you'd like to work together.
         </p>
     </div>
 </section>
-
 
     <!-- Skills Section -->
     <section id="skills">
@@ -259,12 +342,12 @@
     </div>
     
     <div class="card">
-        <h3>DevOps Engineer Intern</h3>
+        <h3>Software Engineer</h3>
         <p>
             <h4> Bank of New York (BNY) | Internship | May 2024 - July 2024 | Chennai, India </h4>
         </p>
         <p>
-            In my role as a DevOps Engineer Intern at Bank of New York (BNY), I optimized platform performance by developing Python scripts that analyzed and removed redundant data in JFrog Artifactory, reducing server load by 10%. I implemented automated Python scripts in pipelines to generate regular platform health reports, enhancing data consistency and system reliability between TPC and CNJ servers. Additionally, I worked with shell scripting, GitLab CI/CD, Python, JFrog Artifactory, and SonarQube to streamline development workflows and enhance platform performance.
+            In my role as a Software Engineer Intern at Bank of New York (BNY), I optimized platform performance by developing Python scripts that analyzed and removed redundant data in JFrog Artifactory, reducing server load by 10%. I implemented automated Python scripts in pipelines to generate regular platform health reports, enhancing data consistency and system reliability between TPC and CNJ servers.
         </p>
     </div>
 
@@ -274,26 +357,56 @@
             <h4> CodeKaroYaaro - International Kids Coding School | Internship | Mar 2023 - Jun 2023 | Maharashtra, India (Remote) </h4>
         </p>
         <p>
-            In my role as a Coding Tutor at CodeKaroYaaro, I enhanced my programming and debugging skills while deepening my understanding of programming fundamentals, particularly in Python and C++. Teaching young learners not only strengthened my knowledge but also improved my ability to explain complex concepts in a clear and engaging manner.
+            As a Coding Tutor at CodeKaroYaaro, I honed my programming and debugging skills in Python and Java while improving my ability to explain complex concepts clearly to young learners.
         </p>
     </div>
 </section>
 
 
 
-    <!-- Achievements Section -->
-    <section id="achievements">
-        <h2>Achievements & Milestones</h2>
-        <div class="card">
-            <ul>
-                <p>Solved over 1,800+ problems data structures and algorithms and competetive programming problems across multiple platforms.</p>
-                <p>Ranked 63rd in CodeChef Starters 154 contest and 73rd in Starters 149 contest.</p>
-                <p>Top problem solver at IIT Palakkad, winning 1st place in programming contests.</p>
-                <p>Ranked in top 3.05% in JEE ADVANCED and top 0.73% in JEE Mains 2021 at the national level.</p>
-                <p>Recipient of Panasonic India Scholarship in 2021.</p>
-            </ul>
+<!-- Achievements Section -->
+<section id="achievements">
+    <h2>Achievements & Milestones</h2>
+    <div class="card">
+        <div class="achievement">
+            Solved over <strong>2,000+</strong> DSA & competitive programming problems, earning a <strong>5⭐ rating</strong> on 
+            <a href="https://www.codechef.com/users/sandeep_iitpkd" target="_blank">CodeChef</a>.
         </div>
-    </section>
+        
+        <div class="achievement">
+            Achieved <strong>global ranks</strong>: 
+            <a href="https://www.codechef.com/rankings/START154B?itemsPerPage=100&order=asc&page=1&search=sandeep_iitpkd&sortBy=rank" target="_blank">63rd</a> in CodeChef Starters 154, 
+            <a href="https://www.codechef.com/rankings/START149B?itemsPerPage=100&order=asc&page=1&search=sandeep_iitpkd&sortBy=rank" target="_blank">73rd</a> in Starters 149.
+        </div>
+
+        <div class="achievement">
+            Recognized as the <strong>top problem solver</strong> at IIT Palakkad, securing 
+            <a href="https://drive.google.com/file/d/1GxbNZum7qaXtA2SuAhCsySGsb6R-XDck/view?usp=sharing" target="_blank">1st place</a> in programming contests.
+        </div>
+
+        <div class="achievement">
+            JEE Advanced 2021: Ranked in the <strong>top 3.05%</strong> among 180,000 candidates.
+        </div>
+        <div class="achievement">
+            JEE Mains 2021: Ranked in the <strong>top 0.73%</strong> among 1,050,000 candidates.
+        </div>
+
+        <div class="achievement">
+            Recipient of the <a href="https://drive.google.com/file/d/1Tyd8lNlt3FVKZpMmSxSPntwBiMLOusjz/view?usp=sharing" target="_blank">Panasonic India Scholarship</a> (2021), awarded to 30 IIT students nationwide. 
+            Featured in <a href="https://indiacsr.in/csr-30-students-get-panasonic-ratti-chattr-scholarship-program/" target="_blank">India CSR</a> & 
+            <a href="https://indiaeducationdiary.in/panasonic-india-announces-winners-of-the-seventh-edition-of-its-flagship-ratti-chattr-scholarship-program/" target="_blank">India Education Diary</a>.
+        </div>
+
+        <div class="achievement">
+            <a href="https://drive.google.com/file/d/1F1-6wX4oxERHJEnALWCfvfqMB7HZ7oeg/view?usp=drive_link" target="_blank">3rd Best Presentation Award</a> at Ganitham 2022 (University of Delhi).
+        </div>
+
+        <div class="achievement">
+            Secured the 3rd highest marks at the state level in the Telangana State 12th Board Exam.
+        </div>
+    </div>
+</section>
+
 
     <!-- Ongoing Research Section -->
     <section id="research">
