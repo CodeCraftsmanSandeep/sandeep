@@ -11,5 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 if (window.innerWidth < 768) {
-    alert("This website is designed for desktop screens. Please use a larger screen.");
-  }  
+    window.location.href = "mobile-not-supported.html";
+  }
+  
