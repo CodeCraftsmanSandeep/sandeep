@@ -8,225 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            background-color: #f0f4f8;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        p {
-            font-family: 'Lora', serif;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #0077b6, #00b4d8);
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .profile-pic {
-            border-radius: 8%;
-            width: 500px;
-            height: 300px;
-            object-fit: cover;
-            margin-top: 20px;
-            border: 5px solid white;
-            transition: transform 0.3s ease;
-        }
-
-        .profile-pic:hover {
-            transform: scale(1.05);
-        }
-
-        h1 {
-            margin: 20px 0 10px;
-            font-size: 2.5em;
-        }
-
-        p {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        .social-links a {
-            color: white;
-            margin: 0 15px;
-            font-size: 1.8em;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #18e455;
-        }
-
-        /* Main Sections */
-        section {
-            padding: 60px 20px;
-            margin: 20px auto;
-            max-width: 1200px;
-        }
-
-        h2 {
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            color: #0077b6;
-            text-align: center;
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            width: 100px;
-            height: 5px;
-            background-color: #00b4d8;
-            display: block;
-            margin: 10px auto;
-            border-radius: 5px;
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .skill-item {
-            background-color: #00b4d8;
-            color: white;
-            padding: 20px 30px;
-            margin: 10px;
-            border-radius: 15px;
-            font-size: 1.3em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .skill-item:hover {
-            transform: translateY(-5px);
-            background-color: #0077b6;
-        }
-
-        /* Experience and Projects */
-        .card {
-            background-color: white;
-            padding: 30px;
-            margin: 30px;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .card h3 {
-            color: #0077b6;
-            font-size: 1.7em;
-            margin-bottom: 15px;
-        }
-
-        .card ul, .card p {
-            font-size: 1.2em;
-            line-height: 1.7;
-        }
-
-        /* Projects Grid */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #0077b6;
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 1.2em;
-        }
-        
-        #achievements .card {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5em;
-            font-family: 'Montserrat', sans-serif; /* Matching font */
-        }
-
-        .achievement {
-            font-size: 1.2rem; /* Increased for better readability */
-            line-height: 1.7;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-            font-family: 'Montserrat', sans-serif; /* Matching font */
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .profile-pic {
-                width: 120px;
-                height: 120px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            p {
-                font-size: 1em;
-            }
-
-            h2 {
-                font-size: 2em;
-            }
-
-            .skill-item {
-                font-size: 1.1em;
-                padding: 15px 20px;
-            }
-
-            .card {
-                padding: 20px;
-            }
-
-            .card h3 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
 </head>
 <body>
+
     <header>
         <img src="pictures/pic1.jpg" alt="Sandeep" class="profile-pic" id="profile-pic">
         <h1 id="name"></h1>
@@ -242,10 +28,18 @@
             <a href="https://github.com/CodeCraftsmanSandeep" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-
         </div>
         
     </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="src/problem_solving.html">Problem Solving Journey</a></li>
+
+            <!-- Placeholder for future button -->
+            <!-- <li><a href="#">Future Button</a></li>  -->
+        </ul>
+    </nav>
     
     <script>
         // Array of image paths

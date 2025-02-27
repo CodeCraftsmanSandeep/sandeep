@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    #notables {
+        text-align: center;
+    }
+
+    .main-badge {
+        width: 100%;
+        max-width: 1100px;
+        height: auto;
+        margin-bottom: 30px; /* Adds space below the first image */
+
+        background-color: white;
+        padding: 30px;
+        margin: 30px;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .badge-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Space between the badges */
+    }
+
+    .badge-grid img {
+        width: 335px; /* Adjust badge size */
+        height: auto;
+    }
+</style>
+<body>
+    <header>
+        <h1>My Problem Solving Journey</h1>
+    </header>
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#notables">Notable Milestones</a></li>
+            <li><a href="#contests">Contests</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <section id="notables">
+        <h2>Notable Milestones</h2>
+        <div class="card">
+            <p><strong>Achieved 5-star rating on CodeChef 👨‍🍳 !!</strong></p>
+            <img src="../pictures/CodeChef5Star.jpeg" alt="5 Star CodeChef" height="400px" width="1000px">
+        </div>
+
+        <div class="badge-grid">
+            <img src="../pictures/CodeChefBadgeContestContender.png" alt="Contest Contender Badge">
+            <img src="../pictures/CodeChefBadgeProblemSolver.png" alt="Problem Solver Badge">
+            <img src="../pictures/CodeChefBadgeStreak.png" alt="Streak Badge">
+        </div>
+    </section>
+
+    
+    <section id="contests">
+        <h2>Competitive Programming Contests</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>CodeChef Starters 154</h3>
+                <p>Achieved global rank 64 in CodeChef Starters 154</p>
+            </div>
+            <div class="card">
+                <h3>CodeChef Starters 149</h3>
+                <p>Secured global rank 73 in CodeChef Starters 149</p>
+            </div>
+        </div>
+        <div class="card">
+            <h3>IIT Palakkad Coding Contests</h3>
+            <p>Won multiple coding contests at IIT Palakkad</p>
+            <img src="../pictures/Winning_certificate.jpg" alt="Winning Certificate" >
+        </div>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects Related to Problem Solving</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>Skip List Performance Analysis</h3>
+                <p>Developed a C++ implementation of Skip List and compared its performance with the C++ set container</p>
+                <a href="https://github.com/CodeCraftsmanSandeep/advanced_data_structure-skip_lists" target="_blank">GitHub Repository</a>
+            </div>
+            <div class="card">
+                <h3>Parallel PageRank Computation</h3>
+                <p>Developed a GPU-accelerated PageRank algorithm using CUDA for efficient parallel computation </p>
+            </div>
+            <div class="card">
+                <h3>Case Study on Random Graph Models</h3>
+                <p>Conducted an in-depth case study on various random graph models</p>
+                <a href="https://github.com/CodeCraftsmanSandeep/case_study_on_random_graph_models" target="_blank">GitHub Repository</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
