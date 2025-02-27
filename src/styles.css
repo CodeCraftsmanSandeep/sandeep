@@ -319,3 +319,22 @@ a:hover {
     background: #00b4d8;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+      display: none;
+    }
+    .mobile-warning {
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      color: red;
+      padding: 20px;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    .mobile-warning {
+      display: none;
+    }
+  }
+  

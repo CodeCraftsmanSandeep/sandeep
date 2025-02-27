@@ -9,3 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     localStorage.setItem("visitorCount", visitorCount);
     document.getElementById("visitorCount").innerText = visitorCount;
 });
+
+if (window.innerWidth < 768) {
+    alert("This website is designed for desktop screens. Please use a larger screen.");
+  }  
