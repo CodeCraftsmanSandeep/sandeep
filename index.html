@@ -12,12 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- <div class="mobile-warning">
-        <h1>Mobile Not Supported</h1>
-        <p>This website is designed for desktop screens.</p>
-        <p>Please visit from a larger screen.</p>
-    </div> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) {
+                document.body.innerHTML = `<div style="text-align:center; font-size: 1.5rem; font-weight: bold; padding: 20px;">
+                    🚫 This website is not supported on mobile devices. Please visit from a desktop.
+                </div>`;
+            }
+        });
+    </script>
 
     <header>
         <img src="pictures/pic1.jpg" alt="Sandeep" class="profile-pic" id="profile-pic">
