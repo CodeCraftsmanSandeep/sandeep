@@ -320,6 +320,38 @@ a:hover {
     border-radius: 5px;
 }
 
+.experience-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;  /* Slightly reduced gap */
+    padding: 5px;  /* Increased padding for better centering */
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    margin-bottom: 15px; /* Adds space below each experience box */
+
+}
+
+.experience-box span {
+    padding: 4px 8px; /* Reduced padding for tighter layout */
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(31, 27, 27, 0.5); /* Slightly reduced shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Hover Effect */
+.experience-box span:hover {
+    transform: scale(1.05); /* Slightly enlarges the box */
+    background-color: #124b84; /* Blue background */
+    color: white; /* White text */
+    box-shadow: 0 4px 12px rgba(46, 126, 173, 0.6); /* Increased shadow for a lifted effect */
+}
+
+
+
 /* 
 @media screen and (max-width: 768px) {
     body {
