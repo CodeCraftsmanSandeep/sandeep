@@ -11,7 +11,102 @@
     <link rel="stylesheet" href="src/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+
+<style>
+    #butterfly {
+        position: fixed; /* Stays on screen even when scrolling */
+        top: 0;
+        left: 0;
+        transition: opacity 1s ease-in;
+        opacity: 0; /* Start hidden */
+        width: 80px; /* Adjust size as needed */
+    }
+</style>
+
+<img id="butterfly" src="pictures/butterfly_wings_1.png" alt="Butterfly"> <!-- Default to wings open -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const butterfly = document.getElementById("butterfly");
+    if (!butterfly) {
+        console.error("Butterfly image not found!");
+        return;
+    }
+
+    const speed = 2.5; // Speed of movement
+    let angle, rad, x, y, startX, startY;
+
+    let isWingsOpen = true; // Track wing state
+    const wingImages = ["pictures/butterfly_wings_2.png", "pictures/butterfly_wings_1.png"]; // Swap images
+
+    function initializeButterfly() {
+        angle = Math.random() * (90 - 20) + 20; // Random angle between 20° and 90°
+        rad = angle * (Math.PI / 180);
+
+        // Determine the start position OFF-SCREEN
+        const side = Math.floor(Math.random() * 4); // 0 = left, 1 = right, 2 = top, 3 = bottom
+
+        if (side === 0) { // Left side
+            startX = -100;
+            startY = Math.random() * window.innerHeight;
+        } else if (side === 1) { // Right side
+            startX = window.innerWidth + 100;
+            startY = Math.random() * window.innerHeight;
+        } else if (side === 2) { // Top side
+            startX = Math.random() * window.innerWidth;
+            startY = -100;
+        } else { // Bottom side
+            startX = Math.random() * window.innerWidth;
+            startY = window.innerHeight + 100;
+        }
+
+        // Set butterfly's position instantly off-screen
+        x = startX;
+        y = startY;
+        butterfly.style.transform = `translate(${x}px, ${y}px) rotate(${90 - angle}deg)`;
+        butterfly.style.opacity = "0"; // Keep it invisible initially
+
+        // Delay fade-in to prevent abrupt visibility
+        setTimeout(() => {
+            butterfly.style.opacity = "1"; // Gradually appear
+        }, 500);
+    }
+
+    function moveButterfly() {
+        x += speed * Math.cos(rad);
+        y -= speed * Math.sin(rad); // Negative y moves up
+
+        // Small flutter effect for a natural look
+        x += (Math.random() - 0.5) * 1.5;
+        y += (Math.random() - 0.5) * 1.5;
+
+        butterfly.style.transform = `translate(${x}px, ${y}px) rotate(${90 - angle}deg)`;
+
+        // If butterfly is fully off-screen, reinitialize
+        if (x < -100 || x > window.innerWidth + 100 || y < -100 || y > window.innerHeight + 100) {
+            initializeButterfly();
+        }
+
+        requestAnimationFrame(moveButterfly);
+    }
+
+    function flapWings() {
+        isWingsOpen = !isWingsOpen;
+        butterfly.src = wingImages[isWingsOpen ? 0 : 1]; // Swap between open & closed images
+    }
+
+    initializeButterfly(); // Set initial position off-screen
+    moveButterfly(); // Start movement
+
+    setInterval(flapWings, 150); // Change wings every 150ms
+});
+</script>
+
+    
+
 <body>
+
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             if (window.innerWidth < 768) {

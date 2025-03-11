@@ -351,6 +351,41 @@ a:hover {
 }
 
 
+#butterfly {
+    position: fixed; /* Fixed to the viewport */
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: auto;
+    z-index: 9999; /* High z-index ensures it stays on top */
+    pointer-events: none; /* Optional: Allows clicks to pass through */
+    transition: transform 0.5s ease-out;
+    opacity: 0; /* Start hidden */
+}
+
+
+
+@keyframes flyAnimation {
+    0% {
+        transform: translateX(-100px) translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(25vw) translateY(-50px) rotate(15deg);
+    }
+    50% {
+        transform: translateX(50vw) translateY(30px) rotate(-10deg);
+    }
+    75% {
+        transform: translateX(75vw) translateY(-40px) rotate(10deg);
+    }
+    100% {
+        transform: translateX(100vw) translateY(0) rotate(0deg);
+    }
+}
+
+
+
+
 
 /* 
 @media screen and (max-width: 768px) {
