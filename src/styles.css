@@ -350,17 +350,16 @@ a:hover {
     box-shadow: 0 4px 12px rgba(46, 126, 173, 0.6); /* Increased shadow for a lifted effect */
 }
 
-
 #butterfly {
-    position: fixed; /* Fixed to the viewport */
-    top: 50px;
-    left: 50px;
-    width: 100px;
+    position: fixed; /* Stays on screen even when scrolling */
+    top: 0;
+    left: 0;
     height: auto;
+    transition: opacity 1s ease-in;
+    opacity: 0; /* Start hidden */
+    width: 80px; /* Adjust size as needed */
     z-index: 9999; /* High z-index ensures it stays on top */
     pointer-events: none; /* Optional: Allows clicks to pass through */
-    transition: transform 0.5s ease-out;
-    opacity: 0; /* Start hidden */
 }
 
 
