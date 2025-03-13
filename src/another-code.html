@@ -1,0 +1,46 @@
+
+/* Navigation Bar */
+.navbar {
+    background: linear-gradient(135deg, #001F3F, #004466);
+    padding: 8px 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    display: inline-block; /* Fixes the excessive width issue */
+    margin: 10px auto; /* Centers the navbar */
+}
+
+/* Navigation List */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Navbar Items */
+.navbar ul li {
+    display: inline;
+}
+
+/* Navbar Links */
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+}
+
+/* Hover Effects */
+.navbar ul li a:hover {
+    background: #00b4d8;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 180, 216, 0.4);
+}
