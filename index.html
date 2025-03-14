@@ -14,9 +14,6 @@
 
 </head>
 <!-- Google tag (gtag.js) -->
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TB5Q0RLGT6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -107,20 +104,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-    
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.innerWidth < 768) {
+            document.body.innerHTML = `<div style="text-align:center; font-size: 1.5rem; font-weight: bold; padding: 20px;">
+                🚫 This website is not supported on mobile devices. Please visit from a desktop.
+            </div>`;
+        }
+    });
+</script>
 
 <body>
 
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            if (window.innerWidth < 768) {
-                document.body.innerHTML = `<div style="text-align:center; font-size: 1.5rem; font-weight: bold; padding: 20px;">
-                    🚫 This website is not supported on mobile devices. Please visit from a desktop.
-                </div>`;
-            }
-        });
-    </script>
+
 
     <header>
         <img src="pictures/profile-pic1.jpg" alt="Sandeep" class="profile-pic" id="profile-pic">
@@ -201,31 +198,36 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         };
     </script>
-    
+        
     <!-- About Me Section -->
     <section id="about">
         <h2>About Me</h2>
         <div class="card">
             <p>
-                Hi there! 👋 I'm an <strong>undergraduate student</strong> at <strong>IIT Palakkad</strong>, majoring in <strong>Computer Science and Engineering</strong> 🎓.  
-                My current research focuses on <strong>high-performance accelerated computing</strong> on GPUs using CUDA, leveraging NVIDIA's parallel programming platform.  
-                I'm also passionate about <strong>competitive programming</strong> 🧩 and regularly participate in contests while solving <strong>data structures and algorithms</strong> problems 💻.  
-                I love working on exciting projects and am always open to <strong>collaboration!</strong>🤝  
-                Feel free to <strong>reach out</strong> if you'd like to work together.
+                Hi there! 👋 I'm an undergraduate student at IIT Palakkad, majoring in Computer Science and Engineering 🎓.  
+                My current research focuses on high-performance accelerated computing on GPUs using CUDA, leveraging NVIDIA's parallel programming platform.  
+                I'm also passionate about competitive programming 🧩 and regularly participate in contests while solving data structures and algorithms problems 💻.  
+                I love working on exciting projects and am always open to collaboration 🤝.  
+                Feel free to reach out if you'd like to work together!
             </p>
         </div>
     </section>
+
 
     <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
         <div class="skills-grid">
-            <div class="skill-item">C++</div>
+            <div class="skill-item">C, C++</div>
             <div class="skill-item">Python</div>
             <div class="skill-item">CUDA C++</div>
             <div class="skill-item">PostgreSQL</div>
             <div class="skill-item">NodeJS</div>
             <div class="skill-item">GitLab CI/CD</div>
+            <div class="skill-item">Git</div>
+            <div class="skill-item">DSA</div>
+            <div class="skill-item">CP</div>
+            <div class="skill-item">VHDL</div>
         </div>
     </section>
 
