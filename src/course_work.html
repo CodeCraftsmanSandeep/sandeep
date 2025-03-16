@@ -49,6 +49,41 @@
         width: 335px; /* Adjust badge size */
         height: auto;
     }
+
+    .content-container {
+        display: flex;
+        align-items: center; /* Aligns items vertically */
+        gap: 10px; /* Adds some space between text and video */
+    }
+
+    .workshop-text {
+        white-space: nowrap; /* Prevents text from wrapping */
+        font-size: 18px; /* Adjust font size if needed */
+    }
+
+
+    .video-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 700px; /* Limits the width of the video */
+        margin-left: 10px; /* Adjusts spacing between text and video */
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 350px; /* Adjust the height as needed */
+        border-radius: 10px; /* Adds rounded corners */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a slight shadow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .video-container iframe:hover {
+        transform: scale(1.02); /* Slight zoom on hover */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    }
+
 </style>
 <body>
     <header>
@@ -74,6 +109,18 @@
         <div class="card">
             <p>Excelled in the NSM-KLA GPU Programming course by IIT Madras (Winter 2023), achieving the highest marks among 80 participants nominated by professors across India. Gained hands-on experience with CUDA C++ and DPC++ for high-performance computing on GPUs.</p>
             <img src="../pictures/Topped_in_gpu_programming_workshop.jpg" alt="Topped in GPU Programming workshop" style="width: 100%; max-width: 1400px;">
+            <div class="content-container">
+                <p class="workshop-text">🎥 <strong>Workshop Recording is on YouTube:</strong></p>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PL3xCBlatwrsXosILGv-nsDxoHoX1RURc2" 
+                            frameborder="0" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            
         </div>
     </section>
 
