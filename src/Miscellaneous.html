@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔀 Miscellaneous</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .card.display-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .display-content {
+            flex: 1;
+        }
+
+        .certificate {
+            flex: 0.5;
+            text-align: center;
+        }
+
+        .certificate img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid #5e5c5c;
+
+            /* Prevent rotation */
+            transform: rotate(0deg);
+            image-orientation: from-image;
+            object-fit: contain;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .image-grid {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .image-grid img {
+            width: 45%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .caption {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .linkedin-embed {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .caption {
+    font-size: 14px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    margin-top: 5px;
+        }
+
+    </style>
+</head>
+<script src="script.js"></script>
+
+<body>
+    <header>
+        <h1> Miscellaneous</h1>
+    </header>
+
+    <div style="text-align: center;">
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Home</a></li>
+                <li><a href="#Panasonic-scholarship">🎓 Panasonic Scholarship</a></li>
+                <li><a href="#Best-Presentation-Award">🏆 Best Presentation Award</a></li>
+            </ul>            
+        </nav>
+    </div>
+
+    <section id="Panasonic-scholarship">
+        <h2>🎓 Panasonic Scholarship</h2>
+
+        <div class = "card"> 
+        <div class="card display-card">
+            <div class="display-content">
+                <p>
+                    🏅 Recipient of the Panasonic India Scholarship (2021) – an exclusive award granted to only 
+                    <strong>30 IIT students nationwide</strong>. Secured the scholarship through a rigorous selection process, 
+                    including a screening test followed by a telephonic interview.
+                </p>
+                
+                <p>
+                    📢 <strong>Featured in national media:</strong> <br>
+                    - 📰 <a href="https://indiacsr.in/csr-30-students-get-panasonic-ratti-chattr-scholarship-program/" target="_blank">India CSR</a> <br>
+                    - 📰 <a href="https://indiaeducationdiary.in/panasonic-india-announces-winners-of-the-seventh-edition-of-its-flagship-ratti-chattr-scholarship-program/" target="_blank">India Education Diary</a>
+                </p>
+
+            </div>
+            <div class="certificate">
+                <img src="../pictures/Panasonic-scholarship/Panasonic_Scholarship_Recipient.jpeg" alt="Panasonic Scholarship Recipient Award">
+                <p class="caption">🎓 Panasonic Scholarship</p>
+            </div>
+
+        </div>
+
+            <div class="image-container">
+                <p class="caption">🏅 Award Ceremony</p>
+                <div class="image-grid">
+                    <img src="../pictures/Panasonic-scholarship/Image_1.jpeg" alt="Award Ceremony">
+                    <img src="../pictures/Panasonic-scholarship/Image_2.jpeg" alt="Award Ceremony">
+                </div>
+            </div>
+
+            <div class="linkedin-embed">
+                <p>🔗 Check out the official announcement on LinkedIn:
+                    <a href="https://www.linkedin.com/posts/panasonicindia_panasonic-rattichattrscholarship-activity-6890634701762375680-VReF?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhO0pABZL9ycj5jX-tPuQXhWmlP9xEPkC0" target="_blank" rel="noopener noreferrer">
+                        Panasonic India announcement
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="best-presentation-award">
+        <h2>🏆 Best Presentation Award</h2>
+    
+        <div class="card">
+            <p>
+                Secured <strong>3rd place</strong> in the paper presentation event at <strong>Ganitham 2022</strong>, the annual 
+                fest of the <em>Department of Mathematics, Shaheed Bhagat Singh College</em> (University of Delhi), held on 
+                <strong>February 21-22, 2022</strong>. 
+            </p>
+    
+            <img src="../pictures/Best-presentation-award/Best_presentation_award.jpeg" 
+                 alt="📜 Best Presentation Award Certificate" 
+                 style="width: 100%; height: auto; max-width: 1400px; border-radius: 8px; border: 2px solid #5e5c5c;">
+            
+            <p class="caption">Certificate of Achievement - Best Presentation Award</p>
+        </div>
+    </section>
+    
+    
+
+</body>
+</html>
