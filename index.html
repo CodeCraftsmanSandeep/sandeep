@@ -407,21 +407,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <footer>
         <p>© 2025 Chekkala Sandeep Reddy. All rights reserved.</p>
-        <button id="loveBtn"> 🩵 Likes <span id="loveCount">0</span></button>
     </footer>
 
 </body>
-
-<!-- Footer script -->
-<script>
-    let loveCount = localStorage.getItem("loveCount") || 0;
-    document.getElementById("loveCount").innerText = loveCount;
-
-    document.getElementById("loveBtn").addEventListener("click", function () {
-        loveCount++;
-        localStorage.setItem("loveCount", loveCount);
-        document.getElementById("loveCount").innerText = loveCount;
-    });
-</script>
 
 </html>
