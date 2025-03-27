@@ -1,164 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problem Solving</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Problem Solving</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Chart.js Data Labels Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
-<script src="script.js"></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TB5Q0RLGT6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TB5Q0RLGT6');
-</script>
-<style>
+  <style>
     #notables {
-        text-align: center;
+      text-align: center;
     }
-
     .main-badge {
-        width: 100%;
-        max-width: 1100px;
-        height: auto;
-        margin-bottom: 30px; /* Adds space below the first image */
-
-        background-color: white;
-        padding: 30px;
-        margin: 30px;
-        border-radius: 15px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      margin-bottom: 30px;
+      background-color: white;
+      padding: 30px;
+      margin: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .badge-grid {
-        display: flex;
-        justify-content: center;
-        gap: 20px; /* Space between the badges */
-        
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
-
     .badge-grid img {
-        width: 335px; /* Adjust badge size */
-        height: auto;
+      width: 335px;
+      height: auto;
     }
-</style>
+  </style>
+</head>
 <body>
-    <header>
-        <h1>My Problem Solving Journey</h1>
-    </header>
+  <header>
+    <h1>My Problem Solving Journey</h1>
+  </header>
+  <div style="text-align: center;">
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html">🏠 Home</a></li>
+        <li><a href="#notables">🌟 Notable Milestones</a></li>
+        <li><a href="#contests">🏆 Contests</a></li>
+        <li><a href="#projects">🛠️ Projects</a></li>
+        <li><a href="#practise">📝 Practise</a></li>
+      </ul>            
+    </nav>
+  </div>
 
-    <div style="text-align: center;">
-        <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">🏠 Home</a></li>
-                <li><a href="#notables">🌟 Notable Milestones</a></li>
-                <li><a href="#contests">🏆 Contests</a></li>
-                <li><a href="#projects">🛠️ Projects</a></li>
-                <li><a href="#practise">📝 Practise</a></li>
-            </ul>            
-        </nav>
+  <section id="notables">
+    <h2>Notable Milestones</h2>
+    <div class="card">
+      <p><strong>Achieved 5-star rating on CodeChef 👨‍🍳 !!</strong></p>
+      <img src="../pictures/CodeChef5Star.jpeg" alt="5 Star CodeChef" style="width: 100%; height: 50%; max-width: 1200px;">
     </div>
+    <div class="badge-grid">
+      <img src="../pictures/CodeChefBadgeContestContender.jpeg" alt="Contest Contender Badge">
+      <img src="../pictures/CodeChefBadgeProblemSolver.jpeg" alt="Problem Solver Badge">
+      <img src="../pictures/CodeChefBadgeStreak.jpeg" alt="Streak Badge">
+    </div>
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
 
-    <section id="notables">
-        <h2>Notable Milestones</h2>
-        <div class="card">
-            <p><strong>Achieved 5-star rating on CodeChef 👨‍🍳 !!</strong></p>
-            <!-- <img src="../pictures/CodeChef5Star.jpeg" alt="5 Star CodeChef" height="400px" width="1000px"> -->
-            <img src="../pictures/CodeChef5Star.jpeg" alt="5 Star CodeChef" style="width: 100%; height: 50%; max-width: 1200px;">
-        </div>
+  .chart-container {
+    width: 60%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    animation: float 6s ease-in-out infinite;
+  }
 
-        <div class="badge-grid">
-            <img src="../pictures/CodeChefBadgeContestContender.jpeg" alt="Contest Contender Badge">
-            <img src="../pictures/CodeChefBadgeProblemSolver.jpeg" alt="Problem Solver Badge">
-            <img src="../pictures/CodeChefBadgeStreak.jpeg" alt="Streak Badge">
-        </div>
-    </section>
+  .chart-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  }
 
-    
-    <section id="contests">
-        <h2>Competitive Programming Contests</h2>
-      
-        <div class="project-grid">
-          <div class="card">
-            <h3>CodeChef Starters 154</h3>
-            <p>Achieved global rank 64 in CodeChef Starters 154</p>
-          </div>
-          <div class="card">
-            <h3>CodeChef Starters 149</h3>
-            <p>Secured global rank 73 in CodeChef Starters 149</p>
-          </div>
-        </div>
-      
-        <div class="card">
-          <h3>IIT Palakkad Coding Contests</h3>
-          <p>Won multiple coding contests at IIT Palakkad</p>
-          <img src="../pictures/Winning_certificate.jpg" alt="Winning Certificate" style="width: 100%; height: 50%; max-width: 1200px;">
-        </div>
-      
-        <div class="card">
-          <h3>CP Contest: Petrichor - Annual Techno-Cultural Fest of IIT Palakkad</h3>
-          <img src="../pictures/Coding/Petrichor_Contest.jpg" alt="Petrichor Contest Certificate" style="width: 100%; height: 50%; max-width: 1200px;">
-        </div>
-      
-        <div class="card">
-          <h3>IICPC Contest</h3>
-          <img src="../pictures/Coding/IICPC_Certificate_Img.jpeg" alt="IICPC Contest Certificate" style="width: 100%; height: 50%; max-width: 1200px;">
-        </div>
-      </section>
-      
-    
-    <section id="projects">
-        <h2>Projects Related to Problem Solving</h2>
-        <div class="project-grid">
-            <div class="card">
-                <h3>Skip List Performance Analysis</h3>
-                <p>Developed a C++ implementation of Skip List and compared its performance with the C++ set container</p>
-                <a href="https://github.com/CodeCraftsmanSandeep/advanced_data_structure-skip_lists" target="_blank">GitHub Repository</a>
-            </div>
-            <div class="card">
-                <h3>Parallel PageRank Computation</h3>
-                <p>Developed a GPU-accelerated PageRank algorithm using CUDA for efficient parallel computation </p>
-            </div>
-            <div class="card">
-                <h3>Case Study on Random Graph Models</h3>
-                <p>Conducted an in-depth case study on various random graph models</p>
-                <a href="https://github.com/CodeCraftsmanSandeep/case_study_on_random_graph_models" target="_blank">GitHub Repository</a>
-            </div>
-        </div>
-    </section>
+  .chart-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+    transform: rotate(45deg);
+    animation: shine 4s infinite;
+  }
 
-    <section id="practise">
-        <h2>📝 Practise</h2>
+  @keyframes shine {
+    0% { transform: rotate(45deg) translateX(-200%); }
+    100% { transform: rotate(45deg) translateX(200%); }
+  }
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  canvas:hover {
+    transform: scale(1.015);
+  }
+</style>
+
+<div class="chart-container">
+  <canvas id="portfolioChart"></canvas>
+  <p style="text-align: right; margin-top: 20px; font-size: 1.2em; animation: textGlow 2s ease-in-out infinite alternate;">And many more...</p>
+</div>
+<script>
+  // Profile links array
+  const sliceLinks = [
+    'https://leetcode.com/u/__sandeep9723__/',
+    'https://www.codechef.com/users/sandeep_iitpkd',
+    'https://www.geeksforgeeks.org/user/sandeepchtiyn/',
+    'https://www.naukri.com/code360/profile/Sandeep_reddy'
+  ];
+
+  // Full passing effect with particles
+  const passingEffectPlugin = {
+    id: 'passingEffect',
+    beforeDraw: (chart) => {
+      const { ctx, chartArea: { left, right, top, bottom } } = chart;
+      const centerX = (left + right) / 2;
+      const centerY = (top + bottom) / 2;
+      const radius = Math.min(right - left, bottom - top) / 2;
+      const time = Date.now();
+      
+      // Main sweeping effect
+      ctx.save();
+      ctx.translate(centerX, centerY);
+      ctx.rotate((time % 4000) / 4000 * 2 * Math.PI);
+      const grad = ctx.createRadialGradient(0, 0, radius*0.3, 0, 0, radius*1.2);
+      grad.addColorStop(0, 'rgba(255,255,255,0.8)');
+      grad.addColorStop(1, 'rgba(255,255,255,0)');
+      ctx.beginPath();
+      ctx.arc(0, 0, radius, -Math.PI/10, Math.PI/10);
+      ctx.lineTo(0, 0);
+      ctx.closePath();
+      ctx.fillStyle = grad;
+      ctx.globalCompositeOperation = 'screen';
+      ctx.fill();
+      ctx.restore();
+
+      // Particle effect
+      ctx.save();
+      ctx.translate(centerX, centerY);
+      ctx.rotate((time % 2000)/2000 * 2 * Math.PI);
+      for(let i = 0; i < 5; i++) {
+        ctx.beginPath();
+        ctx.arc(radius*0.8 * Math.cos(i*Math.PI/2.5), 
+               radius*0.8 * Math.sin(i*Math.PI/2.5), 3, 0, 2*Math.PI);
+        ctx.fillStyle = `hsla(${(time/10 % 360)}, 80%, 60%, 0.8)`;
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+  };
+
+  // Initialize chart
+  const ctx = document.getElementById('portfolioChart').getContext('2d');
+  const portfolioChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['LeetCode', 'CodeChef', 'GeeksforGeeks', 'Naukri'],
+      datasets: [{
+        data: [213, 831, 225, 516],
+        backgroundColor: ['#E57373', '#64B5F6', '#FFD54F', '#4DB6AC'],
+        hoverBackgroundColor: ['#EF5350', '#42A5F5', '#FFCA28', '#26A69A'],
+        borderWidth: 3,
+        borderColor: '#ffffff',
+        hoverOffset: 30,
+        hoverBorderWidth: 5,
+        hoverShadowOffsetX: 5,
+        hoverShadowOffsetY: 5,
+        hoverShadowBlur: 15,
+        hoverShadowColor: 'rgba(0,0,0,0.2)'
+      }]
+    },
+    options: {
+      responsive: true,
+      animation: {
+        animateRotate: true,
+        animateScale: true,
+        duration: 2000,
+        easing: 'elasticOut'
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: 'Problems Solved (2.5k+)',
+          font: {
+            size: 28,
+            family: "'Arial', sans-serif",
+            weight: 'bold'
+          },
+          color: '#333',
+          padding: { top: 10, bottom: 10 }
+        },
+        legend: {
+          position: 'top',
+          labels: {
+            font: { size: 16 },
+            padding: 20,
+            usePointStyle: true,
+            pointStyle: 'circle'
+          }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(0,0,0,0.8)',
+          titleFont: { size: 18 },
+          bodyFont: { size: 16 },
+          cornerRadius: 10,
+          displayColors: false,
+          callbacks: {
+            label: (context) => `${context.label}: ${context.parsed}+ (${((context.parsed/2500)*100).toFixed(1)}%)`
+          }
+        },
+        datalabels: {
+          color: '#fff',
+          font: { weight: 'bold', size: 18 },
+          textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+          formatter: (value) => `${value}+`
+        }
+      },
+      onClick: (evt, elements) => {
+        if (elements.length > 0) {
+          window.open(sliceLinks[elements[0].index], '_blank');
+        }
+      }
+    },
+    plugins: [passingEffectPlugin, ChartDataLabels]
+  });
+
+  // Sparkle effect
+  document.getElementById('portfolioChart').addEventListener('mousemove', (e) => {
+    const rect = e.target.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
     
-        <div class="card">
-            <h3>🔢 Practise - Arrays</h3>
-            <p>✅ Mastered array operations through CodeChef's practice module.</p>
-            <iframe src="../pictures/codechef/Practise-Arrays.pdf" width="100%" height="700px" style="border: 2px solid #007bff; border-radius: 10px;"></iframe>
-            <a href="https://www.codechef.com/certificates/public/8bbd64d" target="_blank" style="font-weight: bold; color: #007bff;">📜 View Certificate</a>
-        </div>
+    const sparkle = document.createElement('div');
+    sparkle.style.position = 'absolute';
+    sparkle.style.left = `${x}px`;
+    sparkle.style.top = `${y}px`;
+    sparkle.style.width = '8px';
+    sparkle.style.height = '8px';
+    sparkle.style.background = 'radial-gradient(#fff, transparent)';
+    sparkle.style.pointerEvents = 'none';
+    sparkle.style.animation = 'sparkle 0.8s linear';
+    e.target.parentElement.appendChild(sparkle);
     
-        <div class="card">
-            <h3>📝 Practise - Strings</h3>
-            <p>✅ Enhanced problem-solving skills in string manipulation.</p>
-            <iframe src="../pictures/codechef/Practise-Strings.pdf" width="100%" height="700px" style="border: 2px solid #007bff; border-radius: 10px;"></iframe>
-            <a href="https://www.codechef.com/certificates/public/ce034ad" target="_blank" style="font-weight: bold; color: #007bff;">📜 View Certificate</a>
-        </div>
-    
-        <div class="card">
-            <h3>🗄️ Top DBMS Interview Questions</h3>
-            <p>✅ Prepared for technical interviews with key DBMS concepts.</p>
-            <iframe src="../pictures/codechef/Top DBMS Interview Questions.pdf" width="100%" height="700px" style="border: 2px solid #007bff; border-radius: 10px;"></iframe>
-            <a href="https://www.codechef.com/certificates/public/5f811fc" target="_blank" style="font-weight: bold; color: #007bff;">📜 View Certificate</a>
-        </div>
-    
-    </section>
-    
+    setTimeout(() => sparkle.remove(), 800);
+  });
+</script>
+  </section>
+
+  <section id="contests">
+    <h2>Competitive Programming Contests</h2>
+    <div class="project-grid">
+      <div class="card">
+        <h3>CodeChef Starters 154</h3>
+        <p>Achieved global rank 64 in CodeChef Starters 154</p>
+      </div>
+      <div class="card">
+        <h3>CodeChef Starters 149</h3>
+        <p>Secured global rank 73 in CodeChef Starters 149</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>IIT Palakkad Coding Contests</h3>
+      <p>Won multiple coding contests at IIT Palakkad</p>
+      <img src="../pictures/Winning_certificate.jpg" alt="Winning Certificate" style="width: 100%; height: 50%; max-width: 1200px;">
+    </div>
+    <div class="card">
+      <h3>CP Contest: Petrichor - Annual Techno-Cultural Fest of IIT Palakkad</h3>
+      <img src="../pictures/Coding/Petrichor_Contest.jpg" alt="Petrichor Contest Certificate" style="width: 100%; height: 50%; max-width: 1200px;">
+    </div>
+    <div class="card">
+      <h3>IICPC Contest</h3>
+      <img src="../pictures/Coding/IICPC_Certificate_Img.jpeg" alt="IICPC Contest Certificate" style="width: 100%; height: 50%; max-width: 1200px;">
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects Related to Problem Solving</h2>
+    <div class="project-grid">
+      <div class="card">
+        <h3>Skip List Performance Analysis</h3>
+        <p>Developed a C++ implementation of Skip List and compared its performance with the C++ set container</p>
+        <a href="https://github.com/CodeCraftsmanSandeep/advanced_data_structure-skip_lists" target="_blank">GitHub Repository</a>
+      </div>
+      <div class="card">
+        <h3>Parallel PageRank Computation</h3>
+        <p>Developed a GPU-accelerated PageRank algorithm using CUDA for efficient parallel computation</p>
+      </div>
+      <div class="card">
+        <h3>Case Study on Random Graph Models</h3>
+        <p>Conducted an in-depth case study on various random graph models</p>
+        <a href="https://github.com/CodeCraftsmanSandeep/case_study_on_random_graph_models" target="_blank">GitHub Repository</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="practise">
+    <h2>📝 Practise</h2>
+    <div class="card">
+      <h3>🔢 Practise - Arrays</h3>
+      <p>✅ Mastered array operations through CodeChef's practice module.</p>
+      <iframe src="../pictures/codechef/Practise-Arrays.pdf" width="100%" height="700px" style="border: 2px solid #007bff; border-radius: 10px;"></iframe>
+      <a href="https://www.codechef.com/certificates/public/8bbd64d" target="_blank" style="font-weight: bold; color: #007bff;">📜 View Certificate</a>
+    </div>
+    <div class="card">
+      <h3>📝 Practise - Strings</h3>
+      <p>✅ Enhanced problem-solving skills in string manipulation.</p>
+      <iframe src="../pictures/codechef/Practise-Strings.pdf" width="100%" height="700px" style="border: 2px solid #007bff; border-radius: 10px;"></iframe>
+      <a href="https://www.codechef.com/certificates/public/ce034ad" target="_blank" style="font-weight: bold; color: #007bff;">📜 View Certificate</a>
+    </div>
+    <div class="card">
+      <h3>🗄️ Top DBMS Interview Questions</h3>
+      <p>✅ Prepared for technical interviews with key DBMS concepts.</p>
+      <iframe src="../pictures/codechef/Top DBMS Interview Questions.pdf" width="100%" height="700px" style="border: 2px solid #007bff; border-radius: 10px;"></iframe>
+      <a href="https://www.codechef.com/certificates/public/5f811fc" target="_blank" style="font-weight: bold; color: #007bff;">📜 View Certificate</a>
+    </div>
+  </section>
 </body>
 </html>
+
