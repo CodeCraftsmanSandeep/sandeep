@@ -202,7 +202,6 @@ h2::after {
     color: #000000;
 }
 
-
 /* Projects Grid */
 .project-grid {
     display: grid;
@@ -363,18 +362,5 @@ footer {
     color: white;
     bottom: 0;
     width: 100%;
-}
-button {
-    background: #e63946;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background 0.3s ease-in-out;
-}
-button:hover {
-    background: #d62828;
 }
 

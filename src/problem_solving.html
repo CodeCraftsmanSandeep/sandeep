@@ -39,9 +39,11 @@
   </style>
 </head>
 <body>
+  
   <header>
     <h1>My Problem Solving Journey</h1>
   </header>
+
   <div style="text-align: center;">
     <nav class="navbar">
       <ul>
@@ -54,6 +56,7 @@
     </nav>
   </div>
 
+
   <section id="notables">
     <h2>Notable Milestones</h2>
     <div class="card">
@@ -65,6 +68,7 @@
       <img src="../pictures/CodeChefBadgeProblemSolver.jpeg" alt="Problem Solver Badge">
       <img src="../pictures/CodeChefBadgeStreak.jpeg" alt="Streak Badge">
     </div>
+
 <style>
   @keyframes float {
     0% { transform: translateY(0px); }
@@ -248,26 +252,6 @@
       }
     },
     plugins: [passingEffectPlugin, ChartDataLabels]
-  });
-
-  // Sparkle effect
-  document.getElementById('portfolioChart').addEventListener('mousemove', (e) => {
-    const rect = e.target.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    
-    const sparkle = document.createElement('div');
-    sparkle.style.position = 'absolute';
-    sparkle.style.left = `${x}px`;
-    sparkle.style.top = `${y}px`;
-    sparkle.style.width = '8px';
-    sparkle.style.height = '8px';
-    sparkle.style.background = 'radial-gradient(#fff, transparent)';
-    sparkle.style.pointerEvents = 'none';
-    sparkle.style.animation = 'sparkle 0.8s linear';
-    e.target.parentElement.appendChild(sparkle);
-    
-    setTimeout(() => sparkle.remove(), 800);
   });
 </script>
   </section>
