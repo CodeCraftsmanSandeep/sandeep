@@ -69,32 +69,100 @@
             text-align: center;
         }
 
-        .navbar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .navbar ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #333;
-            font-size: 18px;
-        }
-
         .caption {
-    font-size: 14px;
-    font-style: italic;
-    color: #555;
-    text-align: center;
-    margin-top: 5px;
+            font-size: 14px;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            margin-top: 5px;
         }
 
     </style>
+
+    <!-- For sustainability project -->
+     <style>
+/* Inner card: vibrant violet background with hidden shiny overlay */
+.inner-card {
+  position: relative;
+  background: #41086c; /* A vibrant violet */
+  border-radius: 15px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Hidden shiny strip (narrow) that will animate on hover */
+.inner-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+  transform: skewX(-25deg);
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* On hover, trigger the shiny strip animation once */
+.inner-card:hover::before {
+  animation: shiny 0.8s forwards;
+}
+
+@keyframes shiny {
+  0% {
+    left: -30%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+/* Flex layout for the card content */
+.card-content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Left column: text content */
+.text-content {
+  flex: 1 1 300px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Override paragraph color for clarity */
+.text-content p {
+  color: #fff;
+}
+
+/* Right column: embedded presentation */
+.embed-content {
+  flex: 1 1 300px;
+  text-align: right;
+}
+
+/* Responsive iframe styling */
+.embed-content iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+}
+
+     </style>
+
+
 </head>
 <script src="script.js"></script>
 
@@ -110,6 +178,7 @@
                 <li><a href="#Panasonic-scholarship">🎓 Panasonic Scholarship</a></li>
                 <li><a href="#Best-Presentation-Award">🏆 Best Presentation Award</a></li>
                 <li><a href="#Road-Safety-Hackathon">🚗 Road Safety Hackathon</a></li>
+                <li><a href="#Sustainability-Project">♻️ Sustainability Project</a></li>
             </ul>            
         </nav>
     </div>
@@ -194,8 +263,32 @@
             </div>
         </div>
     </section>
-    
-    
+
+    <section id="Sustainability-Project">
+        <h2>♻️ Sustainability Project</h2>
+        <div class="card">
+          <div class="inner-card">
+            <div class="card-content">
+              <!-- Left column: text content -->
+              <div class="text-content">
+                <p>
+                  Ever imagined converting <strong>sound energy</strong> 🔊 into <strong>electricity</strong> ⚡? While we’re all familiar with solar ☀️, wind 🌬️, and hydro 💧, sound is an untapped powerhouse waiting to be harnessed!<br><br>
+                  I developed an <em>acoustic energy harvester</em> that captures everyday sounds, amplifies them via resonant design, and transforms them into electrical energy. It’s a fusion of art and science that challenges conventional thinking and sparks innovation!
+                </p>
+              </div>
+              <!-- Right column: embedded presentation and link -->
+              <div class="embed-content">
+                <iframe 
+                  src="https://docs.google.com/presentation/d/e/2PACX-1vTINPyKZURDrUSdJ2oJvciQ8suNAyEP7khZFQVU0bZfU54nLZQpDV88gg5QeZEu5rqoPAFjnZn-uw2U/embed?start=true&loop=true&delayms=3000" 
+                  frameborder="0" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
 
 </body>
 </html>
