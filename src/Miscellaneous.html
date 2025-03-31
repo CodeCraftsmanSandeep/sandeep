@@ -1,296 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔀 Miscellaneous</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .card.display-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            padding: 20px;
-            background-color: aliceblue;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔀 Miscellaneous</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Main Card Styling */
+    .card.display-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px;
+      background-color: aliceblue;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    }
 
-        .display-content {
-            flex: 1;
-        }
+    /* Text and Content */
+    .display-content {
+      flex: 1;
+    }
 
-        .certificate {
-            flex: 0.5;
-            text-align: center;
-        }
+    .certificate {
+      flex: 0.5;
+      text-align: center;
+    }
 
-        .certificate img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            border: 2px solid #5e5c5c;
+    .certificate img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      border: 2px solid #5e5c5c;
+      transform: rotate(0deg);
+      image-orientation: from-image;
+      object-fit: contain;
+    }
 
-            /* Prevent rotation */
-            transform: rotate(0deg);
-            image-orientation: from-image;
-            object-fit: contain;
-        }
+    /* Image Container and Grid */
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 15px auto;
+      max-width: 1200px;
+      width: 100%;
+      text-align: center;
+      padding: 0 25px;
+    }
 
-        .image-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 15px;
-        }
+    .image-grid {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
 
-        .image-grid {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
+    .image-grid img {
+      width: calc(50% - 5px);
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
 
-        .image-grid img {
-            width: 45%;
-            height: auto;
-            border-radius: 8px;
-        }
+    /* Centered Third Image */
+    .centered-image {
+      display: block;
+      margin: 10px auto 0 auto;
+      width: 90%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
+    }
 
-        .caption {
-            font-weight: bold;
-            text-align: center;
-            margin-top: 8px;
-        }
+    /* Caption Styling */
+    .caption {
+      font-size: 14px;
+      font-style: italic;
+      color: #555;
+      text-align: center;
+      margin-top: 5px;
+    }
 
-        .linkedin-embed {
-            margin-top: 20px;
-            text-align: center;
-        }
+    /* LinkedIn Embed Styling */
+    .linkedin-embed {
+      margin-top: 20px;
+      text-align: center;
+    }
 
-        .caption {
-            font-size: 14px;
-            font-style: italic;
-            color: #555;
-            text-align: center;
-            margin-top: 5px;
-        }
+    /* For Sustainability Project */
+    /* Inner card with vibrant violet background and hover animation */
+    .inner-card {
+      position: relative;
+      background: #41086c;
+      border-radius: 15px;
+      padding: 20px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
 
-    </style>
+    .inner-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30%;
+      width: 30%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+      transform: skewX(-25deg);
+      pointer-events: none;
+      opacity: 0;
+    }
 
-    <!-- For sustainability project -->
-     <style>
-/* Inner card: vibrant violet background with hidden shiny overlay */
-.inner-card {
-  position: relative;
-  background: #41086c; /* A vibrant violet */
-  border-radius: 15px;
-  padding: 20px;
-  overflow: hidden;
-}
+    .inner-card:hover::before {
+      animation: shiny 0.8s forwards;
+    }
 
-/* Hidden shiny strip (narrow) that will animate on hover */
-.inner-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -30%;
-  width: 30%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
-  transform: skewX(-25deg);
-  pointer-events: none;
-  opacity: 0;
-}
+    @keyframes shiny {
+      0% { left: -30%; opacity: 0; }
+      50% { opacity: 1; }
+      100% { left: 100%; opacity: 0; }
+    }
 
-/* On hover, trigger the shiny strip animation once */
-.inner-card:hover::before {
-  animation: shiny 0.8s forwards;
-}
+    .card-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
 
-@keyframes shiny {
-  0% {
-    left: -30%;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    left: 100%;
-    opacity: 0;
-  }
-}
+    .text-content {
+      flex: 1 1 300px;
+      color: #fff;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
 
-/* Flex layout for the card content */
-.card-content {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-}
+    .text-content p {
+      color: #fff;
+    }
 
-/* Left column: text content */
-.text-content {
-  flex: 1 1 300px;
-  color: #fff;
-  font-size: 1rem;
-  line-height: 1.6;
-}
+    .embed-content {
+      flex: 1 1 300px;
+      text-align: right;
+    }
 
-/* Override paragraph color for clarity */
-.text-content p {
-  color: #fff;
-}
+    .embed-content iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      border-radius: 15px;
+      border: 2px solid #fff;
+    }
 
-/* Right column: embedded presentation */
-.embed-content {
-  flex: 1 1 300px;
-  text-align: right;
-}
+    /* Video Section */
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      margin: 20px auto;
+      max-width: 1200px;
+      align-items: center; /* Add this line */
+    }
 
-/* Responsive iframe styling */
-.embed-content iframe {
-  width: 100%;
-  max-width: 600px;
-  height: 350px;
-  border-radius: 15px;
-  border: 2px solid #fff;
-}
+    .video-item {
+      flex: 1 1 300px;
+      text-align: center;
+    }
 
-     </style>
+    .video-title {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #333;
+      text-transform: capitalize;
+    }
 
+    /* Video embed common styles */
+    .video-embed {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      background: #000;
+      width: 100%;
+    }
 
+    /* Portrait video (9:16) */
+    .video-portrait {
+      aspect-ratio: 9 / 16;
+      max-width: 300px;
+      max-height: 400px;
+      margin: 0 auto;
+    }
+
+    /* Landscape video (16:9) */
+    .video-landscape {
+      aspect-ratio: 16 / 9;
+      max-width: 480px;
+      max-height: 400px;
+      margin: 0 auto;
+    }
+
+    .video-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
-<script src="script.js"></script>
-
 <body>
-    <header>
-        <h1> Miscellaneous</h1>
-    </header>
+  <header>
+    <h1>Miscellaneous</h1>
+  </header>
 
-    <div style="text-align: center;">
-        <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">🏠 Home</a></li>
-                <li><a href="#Panasonic-scholarship">🎓 Panasonic Scholarship</a></li>
-                <li><a href="#Best-Presentation-Award">🏆 Best Presentation Award</a></li>
-                <li><a href="#Road-Safety-Hackathon">🚗 Road Safety Hackathon</a></li>
-                <li><a href="#Sustainability-Project">♻️ Sustainability Project</a></li>
-            </ul>            
-        </nav>
+  <div style="text-align: center;">
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html">🏠 Home</a></li>
+        <li><a href="#Panasonic-scholarship">🎓 Panasonic Scholarship</a></li>
+        <li><a href="#Best-Presentation-Award">🏆 Best Presentation Award</a></li>
+        <li><a href="#Road-Safety-Hackathon">🚗 Road Safety Hackathon</a></li>
+        <li><a href="#Sustainability-Project">♻️ Sustainability Project</a></li>
+      </ul>            
+    </nav>
+  </div>
+
+  <section id="Panasonic-scholarship">
+    <h2>🎓 Panasonic Scholarship</h2>
+    <div class="card"> 
+      <div class="card display-card">
+        <div class="display-content">
+          <p>
+            🏅 Recipient of the Panasonic India Scholarship (2021) – an exclusive award granted to only 
+            <strong>30 IIT students nationwide</strong>. Secured the scholarship through a rigorous selection process, 
+            including a screening test followed by a telephonic interview.
+          </p>
+          <p>
+            📢 <strong>Featured in national media:</strong> <br>
+            - 📰 <a href="https://indiacsr.in/csr-30-students-get-panasonic-ratti-chattr-scholarship-program/" target="_blank">India CSR</a> <br>
+            - 📰 <a href="https://indiaeducationdiary.in/panasonic-india-announces-winners-of-the-seventh-edition-of-its-flagship-ratti-chattr-scholarship-program/" target="_blank">India Education Diary</a>
+          </p>
+        </div>
+        <div class="certificate">
+          <img src="../pictures/Panasonic-scholarship/Panasonic_Scholarship_Recipient.jpeg" alt="Panasonic Scholarship Recipient Award">
+          <p class="caption">🎓 Panasonic Scholarship</p>
+        </div>
+      </div>
+
+      <div class="image-container">
+        <p class="caption">🏅 Award Ceremony</p>
+        <div class="image-grid">
+          <img src="../pictures/Panasonic-scholarship/Image_1.jpeg" alt="Award Ceremony">
+          <img src="../pictures/Panasonic-scholarship/Image_2.jpeg" alt="Award Ceremony">
+        </div>
+        <img class="centered-image" src="../pictures/Panasonic-scholarship/awarding.jpeg" alt="Award Ceremony">
+      </div>
+
+      <div class="linkedin-embed">
+        <p>🔗 Check out the official announcement on LinkedIn:
+          <a href="https://www.linkedin.com/posts/panasonicindia_panasonic-rattichattrscholarship-activity-6890634701762375680-VReF?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhO0pABZL9ycj5jX-tPuQXhWmlP9xEPkC0" target="_blank" rel="noopener noreferrer">
+            Panasonic India announcement
+          </a>
+        </p>
+      </div>
     </div>
+  </section>
 
-    <section id="Panasonic-scholarship">
-        <h2>🎓 Panasonic Scholarship</h2>
+  <section id="Best-Presentation-Award">
+    <h2>🏆 Best Presentation Award</h2>
+    <div class="card">
+      <p>
+        Secured <strong>3rd place</strong> in the paper presentation event at <strong>Ganitham 2022</strong>, the annual 
+        fest of the <em>Department of Mathematics, Shaheed Bhagat Singh College</em> (University of Delhi), held on 
+        <strong>February 21-22, 2022</strong>. 
+      </p>
+      <img src="../pictures/Best-presentation-award/Best_presentation_award.jpeg" 
+           alt="📜 Best Presentation Award Certificate" 
+           style="width: 100%; height: auto; max-width: 1400px; border-radius: 8px; border: 2px solid #5e5c5c;">
+      <p class="caption">Certificate of Achievement - Best Presentation Award</p>
+    </div>
+  </section>
 
-        <div class = "card"> 
-        <div class="card display-card">
-            <div class="display-content">
-                <p>
-                    🏅 Recipient of the Panasonic India Scholarship (2021) – an exclusive award granted to only 
-                    <strong>30 IIT students nationwide</strong>. Secured the scholarship through a rigorous selection process, 
-                    including a screening test followed by a telephonic interview.
-                </p>
-                
-                <p>
-                    📢 <strong>Featured in national media:</strong> <br>
-                    - 📰 <a href="https://indiacsr.in/csr-30-students-get-panasonic-ratti-chattr-scholarship-program/" target="_blank">India CSR</a> <br>
-                    - 📰 <a href="https://indiaeducationdiary.in/panasonic-india-announces-winners-of-the-seventh-edition-of-its-flagship-ratti-chattr-scholarship-program/" target="_blank">India Education Diary</a>
-                </p>
+  <section id="Road-Safety-Hackathon">
+    <h2>🚗 Road Safety Hackathon</h2>
+    <div class="card">
+      <p>
+        I actively participated in the <strong>Road Safety Hackathon</strong>, where I promoted responsible driving and safety awareness! ⚠️🦺 <br/>
+        I presented innovative <strong>AI-based solutions</strong> to enhance road safety, leveraging machine learning to predict and prevent potential hazards. 🤖🚧
+      </p>
+      <figure style="text-align: center; width: 100%; height: auto; max-width: 1400px; border-radius: 8px; border: 2px solid #5e5c5c; margin: 0 auto;">
+        <iframe src="../pictures/work/Abstract.pdf" width="100%" height="700px" title="Road Safety Presentation"></iframe>
+      </figure>
+      <div style="text-align: center; margin-top: 10px;">
+        <span style="font-style: italic;">My Presentation 📊</span>
+      </div>
+    </div>
+  </section>
 
-            </div>
-            <div class="certificate">
-                <img src="../pictures/Panasonic-scholarship/Panasonic_Scholarship_Recipient.jpeg" alt="Panasonic Scholarship Recipient Award">
-                <p class="caption">🎓 Panasonic Scholarship</p>
-            </div>
-
-        </div>
-
-            <div class="image-container">
-                <p class="caption">🏅 Award Ceremony</p>
-                <div class="image-grid">
-                    <img src="../pictures/Panasonic-scholarship/Image_1.jpeg" alt="Award Ceremony">
-                    <img src="../pictures/Panasonic-scholarship/Image_2.jpeg" alt="Award Ceremony">
-                </div>
-            </div>
-
-            <div class="linkedin-embed">
-                <p>🔗 Check out the official announcement on LinkedIn:
-                    <a href="https://www.linkedin.com/posts/panasonicindia_panasonic-rattichattrscholarship-activity-6890634701762375680-VReF?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhO0pABZL9ycj5jX-tPuQXhWmlP9xEPkC0" target="_blank" rel="noopener noreferrer">
-                        Panasonic India announcement
-                    </a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="Best-Presentation-Award">
-        <h2>🏆 Best Presentation Award</h2>
-    
-        <div class="card">
+  <section id="Sustainability-Project">
+    <h2>♻️ Sustainability Project</h2>
+    <div class="card">
+      <div class="inner-card">
+        <div class="card-content">
+          <!-- Left column: text content -->
+          <div class="text-content">
             <p>
-                Secured <strong>3rd place</strong> in the paper presentation event at <strong>Ganitham 2022</strong>, the annual 
-                fest of the <em>Department of Mathematics, Shaheed Bhagat Singh College</em> (University of Delhi), held on 
-                <strong>February 21-22, 2022</strong>. 
+              Ever imagined converting <strong>sound energy</strong> 🔊 into <strong>electricity</strong> ⚡? While we’re all familiar with solar ☀️, wind 🌬️, and hydro 💧, sound is an untapped powerhouse waiting to be harnessed!<br><br>
+              I developed an <em>acoustic energy harvester</em> that captures everyday sounds, amplifies them via resonant design, and transforms them into electrical energy. It’s a fusion of art and science that challenges conventional thinking and sparks innovation!
             </p>
-    
-            <img src="../pictures/Best-presentation-award/Best_presentation_award.jpeg" 
-                 alt="📜 Best Presentation Award Certificate" 
-                 style="width: 100%; height: auto; max-width: 1400px; border-radius: 8px; border: 2px solid #5e5c5c;">
-            
-            <p class="caption">Certificate of Achievement - Best Presentation Award</p>
-        </div>
-    </section>
-
-
-    <section id="Road-Safety-Hackathon">
-        <h2>🚗 Road Safety Hackathon</h2>
-        
-        <div class="card">
-            <p>
-                I actively participated in the <strong>Road Safety Hackathon</strong>, where I promoted responsible driving and safety awareness! ⚠️🦺 <br/>
-                I presented innovative <strong>AI-based solutions</strong> to enhance road safety, leveraging machine learning to predict and prevent potential hazards. 🤖🚧
-            </p>
-        
-            <figure style="text-align: center; width: 100%; height: auto; max-width: 1400px; border-radius: 8px; border: 2px solid #5e5c5c; margin: 0 auto;">
-                <iframe src="../pictures/work/Abstract.pdf" width="100%" height="700px" title="Road Safety Presentation"></iframe>
-            </figure>
-            <div style="text-align: center; margin-top: 10px;">
-                <span style="font-style: italic;">My Presentation 📊</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="Sustainability-Project">
-        <h2>♻️ Sustainability Project</h2>
-        <div class="card">
-          <div class="inner-card">
-            <div class="card-content">
-              <!-- Left column: text content -->
-              <div class="text-content">
-                <p>
-                  Ever imagined converting <strong>sound energy</strong> 🔊 into <strong>electricity</strong> ⚡? While we’re all familiar with solar ☀️, wind 🌬️, and hydro 💧, sound is an untapped powerhouse waiting to be harnessed!<br><br>
-                  I developed an <em>acoustic energy harvester</em> that captures everyday sounds, amplifies them via resonant design, and transforms them into electrical energy. It’s a fusion of art and science that challenges conventional thinking and sparks innovation!
-                </p>
-              </div>
-              <!-- Right column: embedded presentation and link -->
-              <div class="embed-content">
-                <iframe 
-                  src="https://docs.google.com/presentation/d/e/2PACX-1vTINPyKZURDrUSdJ2oJvciQ8suNAyEP7khZFQVU0bZfU54nLZQpDV88gg5QeZEu5rqoPAFjnZn-uw2U/embed?start=true&loop=true&delayms=3000" 
-                  frameborder="0" 
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </div>
+          </div>
+          <!-- Right column: embedded presentation -->
+          <div class="embed-content">
+            <iframe 
+              src="https://docs.google.com/presentation/d/e/2PACX-1vTINPyKZURDrUSdJ2oJvciQ8suNAyEP7khZFQVU0bZfU54nLZQpDV88gg5QeZEu5rqoPAFjnZn-uw2U/embed?start=true&loop=true&delayms=3000" 
+              frameborder="0" 
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
-      </section>
-      
-
+      </div>
+      <!-- Video Section with Titles -->
+      <div class="video-container">
+        <!-- First Video -->
+        <div class="video-item">
+          <p class="caption">Voltage difference recorded using Multimeter</p>
+          <div class="video-embed video-portrait">
+            <iframe 
+              src="https://www.youtube.com/embed/eVViSBFJG0g" 
+              title="Portrait YouTube video" 
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <!-- Second Video -->
+        <div class="video-item">
+          <p class="caption">Voltage difference recorded using Oscilloscope</p>
+          <div class="video-embed video-landscape">
+            <iframe 
+              src="https://www.youtube.com/embed/XvXHPhb1VjE" 
+              title="Landscape YouTube video" 
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
-
-
