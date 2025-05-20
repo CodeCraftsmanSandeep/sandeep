@@ -89,6 +89,60 @@
     }
 
 </style>
+
+<!-- For mobile devices -->
+<style>
+    @media (max-width: 768px) {
+    
+        /* Make PDF iframe responsive */
+        .responsive-pdf {
+            text-align: center;
+            margin: 20px auto;
+        }
+    
+        .responsive-pdf iframe {
+            width: 95% !important;
+            height: 60vh !important;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .responsive-pdf figcaption {
+            font-size: 13px;
+            margin-top: 8px;
+            padding: 0 10px;
+            color: #444;
+        }
+    
+        /* Adjust main card layout on small devices */
+        .card {
+            padding: 15px;
+            margin: 10px;
+        }
+    
+        /* Make images responsive */
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* Adjust video container */
+        .video-container iframe {
+            height: 200px !important;
+        }
+    
+        .workshop-text {
+            font-size: 14px;
+        }
+    
+        .content-container {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+</style>
+    
 <body>
     <header>
         <h1>Course Work</h1>
