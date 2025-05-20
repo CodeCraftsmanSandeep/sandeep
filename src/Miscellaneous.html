@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🔀 Miscellaneous</title>
@@ -216,7 +217,64 @@
     }
   </style>
 
+  <!-- For small screens -->
+   <style>
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .card.display-card,
+  .card-content {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
 
+  .display-content,
+  .certificate,
+  .text-content,
+  .embed-content {
+    flex: 1 1 100%;
+  }
+
+  .certificate img,
+  .image-grid img,
+  .centered-image,
+  .embed-content iframe,
+  .video-embed {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image-grid img {
+    width: 100%;
+  }
+
+  .video-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .video-portrait, .video-landscape {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+  }
+
+  .inner-card {
+    padding: 15px;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
+
+   </style>
+  
 </head>
 <body>
   <header>
@@ -370,7 +428,12 @@
         Back to Top ↑
       </button>
     </footer>
-  
+
+    <!-- 
+    Skip list video:
+    https://youtu.be/0Fw_JoMJ1hg, 
+    there is presentation slides as well
+    -->
 
 </body>
 </html>

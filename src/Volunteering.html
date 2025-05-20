@@ -62,8 +62,27 @@
             text-align: left;
         }
     </style>
+
+    <!-- For small screens -->
+     <style>
+    @media (max-width: 768px) {
+        .split-container {
+            flex-direction: column;
+        }
+    }
+    .image-container,
+    .split-container {
+        flex-wrap: wrap;
+    }
+    .image-container img,
+        .split-container img,
+        .split-container .text-content {
+            width: 100%;
+    }
+     </style>
 </head>
 <script src="script.js"></script>
+
 
 <body>
     <header>
