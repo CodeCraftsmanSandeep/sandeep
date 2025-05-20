@@ -219,57 +219,122 @@
 
   <!-- For small screens -->
    <style>
-/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .card.display-card,
-  .card-content {
+  /* Unified image styling for mobile */
+  .image-container img {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 10px 0;
+  }
+
+  /* Stack image grid vertically */
+  .image-grid {
     flex-direction: column;
-    align-items: stretch;
+    gap: 15px;
+  }
+
+  /* Center align all images */
+  .image-grid img,
+  .centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Consistent image borders */
+  .image-container img {
+    border: 2px solid #5e5c5c;
+    border-radius: 10px;
+  }
+
+  /* Caption adjustments */
+  .caption {
+    font-size: 12px;
+    margin: 8px 0;
+  }
+
+  /* Padding adjustments */
+  .image-container {
+    padding: 0 15px;
+  }
+
+  /* Make certificate images consistent */
+  .certificate img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container img {
+    border-width: 1px;
+  }
+  
+  .certificate img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Add this to your existing media query */
+  .image-grid {
+    gap: 15px !important; /* Uniform gap between grid images */
+    margin-bottom: 15px; /* Matches gap with centered image */
+  }
+
+  .centered-image {
+    margin: 15px auto !important; /* Consistent vertical spacing */
+    width: 95% !important;
+  }
+
+  /* Ensure all images have same spacing */
+  .image-container > * {
+    margin: 15px 0 !important;
+  }
+
+  /* Remove any residual margins */
+  .image-container img {
+    margin: 0 !important;
+  }
+
+  /* Caption spacing */
+  .caption {
+    margin: 8px 0 15px 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Panasonic Scholarship Card Fix */
+  .card.display-card {
+    flex-direction: column;
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .display-content, 
+  .certificate {
+    width: 100%;
+    flex: none;
+  }
+
+  .certificate {
+    order: 2; /* Move image below text */
+    margin-top: 20px;
+  }
+
+  .certificate img {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .display-content p {
     text-align: center;
   }
 
-  .display-content,
-  .certificate,
-  .text-content,
-  .embed-content {
-    flex: 1 1 100%;
-  }
-
-  .certificate img,
-  .image-grid img,
-  .centered-image,
-  .embed-content iframe,
-  .video-embed {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .image-grid img {
-    width: 100%;
-  }
-
-  .video-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .video-portrait, .video-landscape {
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: auto;
-  }
-
-  .inner-card {
-    padding: 15px;
-  }
-
-  iframe {
-    width: 100% !important;
-    height: auto;
-  }
-
-  body {
-    padding: 10px;
+  .display-content strong {
+    display: block;
+    margin: 10px 0;
   }
 }
 
