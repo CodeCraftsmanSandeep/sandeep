@@ -49,26 +49,10 @@
             text-align: center;
         }
 
-        .spadex-block img,
-        .spadex-block iframe {
-            width: 70%;  /* Full width of the parent container */
-            height: 70%; /* Adjust height as needed */
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        }
-
         .caption {
             margin-top: 10px;
             font-size: 14px;
             color: #555;
-        }
-
-        .spadex-block iframe {
-            width: 70%;  /* Make it take full width of its parent */
-            aspect-ratio: 10 / 13.5;  /* Maintains a proper aspect ratio */
-            max-width: 500px;  /* Adjust based on your image size */
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         .spadex-standalone {
@@ -105,14 +89,12 @@
         }
 
         .caption {
-    font-style: italic;
-    font-size: 14px;
-    color: #666; /* Slightly dimmed text */
-    text-align: center;
-    margin-top: 5px;
-}
-
-
+            font-style: italic;
+            font-size: 14px;
+            color: #666; /* Slightly dimmed text */
+            text-align: center;
+            margin-top: 5px;
+        }
     </style>
 
     <!-- For small devices -->
@@ -140,17 +122,10 @@
             aspect-ratio: auto;
         }
 
-        .navbar ul {
-            flex-direction: column;
-            padding: 0;
-            gap: 10px;
+        .spadex-block iframe,
+        .spadex-block img {
+            aspect-ratio: 12 / 17;
         }
-
-        .navbar li {
-            display: block;
-            text-align: center;
-        }
-
 
         .card {
             padding: 10px;
@@ -186,9 +161,10 @@
             margin-top: 8px;
             padding: 0 10px;
         }
+        
     }
     </style>
-    
+
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TB5Q0RLGT6"></script>
@@ -321,7 +297,6 @@
         </div>
     </section>
     
-
     <section id="TA-IITPKD">
         <h2>🎓 Teaching Assistant @IIT-PKD</h2>
         
@@ -344,11 +319,10 @@
             </p>
 
             <figure class="responsive-pdf">
-                <iframe src="../pictures/Boys-rep/Sandeep_Reddy_Boys_Representative_Manifesto.pdf" frameborder="0"></iframe>
+                <iframe src="https://drive.google.com/file/d/1xXBYP1jGvUjtJ_GAUx-7Ndo_vlYRmaTT/preview" width="700" height="auto" allow="autoplay" frameborder="0"></iframe>
                 <figcaption style="font-style: italic; margin-top: 10px;">My manifesto (Best Memory Ever!)✨</figcaption>
             </figure>
     
-
         </div>
 
     </section>
