@@ -421,9 +421,44 @@
         I actively participated in the <strong>Road Safety Hackathon</strong>, where I promoted responsible driving and safety awareness! ⚠️🦺 <br/>
         I presented innovative <strong>AI-based solutions</strong> to enhance road safety, leveraging machine learning to predict and prevent potential hazards. 🤖🚧
       </p>
-      <figure style="text-align: center; width: 100%; height: auto; max-width: 1400px; border-radius: 8px; border: 2px solid #5e5c5c; margin: 0 auto;">
-        <iframe src="../pictures/work/Abstract.pdf" width="100%" title="Road Safety Presentation"></iframe>
-      </figure>
+
+      <div class="pdf-container">
+        <iframe 
+          src="https://drive.google.com/file/d/1XQZlszyno3wQc340ZLuv5azcRjlA7N9i/preview?view=fitH" 
+          class="responsive-pdf"
+          allow="autoplay"
+          title="Road Safety Presentation"
+        ></iframe>
+      </div>
+      
+      <style>
+      .responsive-pdf {
+        width: 100%;
+        border:#000 3px solid;
+        /* Desktop height */
+        height: 72vh; /* 75% of viewport height */
+        min-height: 600px;
+        border-image-slice: 1;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        border-radius: 0.5rem;
+      }
+      
+      @media (max-width: 768px) {
+        .responsive-pdf {
+          /* Mobile height */
+          height: 60vh; /* 60% of viewport height */
+          min-height: 400px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .responsive-pdf {
+          height: 50vh; /* 50% of viewport height */
+          min-height: 300px;
+        }
+      }
+      </style>
+
       <div style="text-align: center; margin-top: 10px;">
         <span style="font-style: italic;">My Presentation 📊</span>
       </div>

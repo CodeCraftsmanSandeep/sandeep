@@ -143,6 +143,7 @@
     .responsive-pdf iframe {
         width: 100%;
         max-width: 1000px;
+        border:#000 3px solid;
         height: 80vh;
         border: none;
         border-radius: 10px;
@@ -163,6 +164,28 @@
         }
         
     }
+
+/* Modify the existing PDF styles */
+.responsive-pdf iframe {
+    width: 100%;
+    max-width: 1000px;
+    height: 80vh;
+    /* Border styling */
+    border: 3px solid #5e5c5c !important; /* Match other borders */
+    border-radius: 10px; /* Consistent with other elements */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px; /* Space between border and content */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .responsive-pdf iframe {
+        width: 95%;
+        height: 50vh;
+        border-width: 2px; /* Slightly thinner on mobile */
+        padding: 3px;
+    }
+}
     </style>
 
 </head>
@@ -319,7 +342,7 @@
             </p>
 
             <figure class="responsive-pdf">
-                <iframe src="https://drive.google.com/file/d/1xXBYP1jGvUjtJ_GAUx-7Ndo_vlYRmaTT/preview" width="700" height="auto" allow="autoplay" frameborder="0"></iframe>
+                <iframe src="https://drive.google.com/file/d/1xXBYP1jGvUjtJ_GAUx-7Ndo_vlYRmaTT/preview" width="700" allow="autoplay"></iframe>
                 <figcaption style="font-style: italic; margin-top: 10px;">My manifesto (Best Memory Ever!)✨</figcaption>
             </figure>
     
