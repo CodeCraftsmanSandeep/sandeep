@@ -165,27 +165,27 @@
         
     }
 
-/* Modify the existing PDF styles */
-.responsive-pdf iframe {
-    width: 100%;
-    max-width: 1000px;
-    height: 80vh;
-    /* Border styling */
-    border: 3px solid #5e5c5c !important; /* Match other borders */
-    border-radius: 10px; /* Consistent with other elements */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    padding: 5px; /* Space between border and content */
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
+    /* Modify the existing PDF styles */
     .responsive-pdf iframe {
-        width: 95%;
-        height: 50vh;
-        border-width: 2px; /* Slightly thinner on mobile */
-        padding: 3px;
+        width: 100%;
+        max-width: 1000px;
+        height: 80vh;
+        /* Border styling */
+        border: 3px solid #5e5c5c !important; /* Match other borders */
+        border-radius: 10px; /* Consistent with other elements */
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        padding: 5px; /* Space between border and content */
     }
-}
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .responsive-pdf iframe {
+            width: 95%;
+            height: 50vh;
+            border-width: 2px; /* Slightly thinner on mobile */
+            padding: 3px;
+        }
+    }
     </style>
 
 </head>
