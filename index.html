@@ -21,9 +21,8 @@
 </script>
 <script src="src/script.js" async></script>
 
-
+<!-- Script for butterfly -->
 <img id="butterfly" src="pictures/butterfly_1.png" alt="Butterfly"> <!-- Default to wings open -->
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const butterfly = document.getElementById("butterfly");
@@ -233,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="card">
             <h3>Bachelor of Technology (B.Tech) in Computer Science</h3>
             <strong><p>
-                Indian Institute of Technology (IIT) Palakkad | CGPA: 8.72/10 (up to Semester 7) | Expected 2025
+                Indian Institute of Technology (IIT) Palakkad | CGPA: 8.8/10 | Expected July 2025
             </p></strong>
         </div>
         <div class="card">
@@ -250,205 +249,84 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     </section>
 
-<!-- Work Experience Section -->
-<!-- <section id="experience">
-    <h2>Work Experience</h2>
-    <div class="card">
-        <h3>Project Intern</h3>
-        <div class="experience-box">
-            <span>Indian Space Research Organisation (ISRO)</span>
-            <span>Internship</span>
-            <span>December 2024 - January 2025</span>
-            <span>Sriharikota, India</span>
-        </div>
+    <!-- Ongoing Research Section -->
+    <section id="research" class="section">
+        <h2 class="section-title">Ongoing Research</h2>
         
-        <p>
-            Developing Python code to monitor the status of cameras (of diverse models) by sending queries using their IP addresses, providing timely updates on camera feed status to ISRO personnel which are used for rocket and island surveillance.
-        </p>
-    </div>
-    
-    <div class="card">
-        <h3>Software Engineer</h3>
-        <div class="experience-box">
-            <span>Bank of New York (BNY)</span>
-            <span>Internship</span>
-            <span>May 2024 - July 2024</span>
-            <span>Chennai, India</span>
-        </div>
-        
-        <p>
-            In my role as a Software Engineer Intern at Bank of New York (BNY), I optimized platform performance by developing Python scripts that analyzed and removed redundant data in JFrog Artifactory, reducing server load by 10%. I implemented automated Python scripts in pipelines to generate regular platform health reports, enhancing data consistency and system reliability between TPC and CNJ servers.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Coding Tutor</h3>
-        <div class="experience-box">
-            <span>CodeKaroYaaro - International Kids Coding School</span>
-            <span>Part-time</span>
-            <span>Mar 2023 - Jun 2023</span>
-            <span>Remote</span>
-        </div>
-        
-        <p>
-            As a Coding Tutor at CodeKaroYaaro, I honed my programming and debugging skills in Python and Java while improving my ability to explain complex concepts clearly to young learners.
-        </p>
-    </div>
-</section> -->
-
-
-<!-- Achievements Section -->
-<!-- <section id="achievements">
-    <h2>Achievements & Milestones</h2>
-    <div class="card">
-        <div class="achievement">
-            Solved over <strong>2,000+</strong> DSA & competitive programming problems, earning a <strong>5⭐ rating</strong> on 
-            <a href="https://www.codechef.com/users/sandeep_iitpkd" target="_blank">CodeChef</a>.
-        </div>
-        
-        <div class="achievement">
-            Achieved <strong>global ranks</strong>: 
-            <a href="https://www.codechef.com/rankings/START154B?itemsPerPage=100&order=asc&page=1&search=sandeep_iitpkd&sortBy=rank" target="_blank">63rd</a> in CodeChef Starters 154, 
-            <a href="https://www.codechef.com/rankings/START149B?itemsPerPage=100&order=asc&page=1&search=sandeep_iitpkd&sortBy=rank" target="_blank">73rd</a> in Starters 149.
-        </div>
-
-        <div class="achievement">
-            Recognized as the <strong>top problem solver</strong> at IIT Palakkad, securing 
-            <a href="https://drive.google.com/file/d/1GxbNZum7qaXtA2SuAhCsySGsb6R-XDck/view?usp=sharing" target="_blank">1st place</a> in programming contests.
-        </div>
-
-        <div class="achievement">
-            JEE Advanced 2021: Ranked in the <strong>top 3.05%</strong> among 180,000 candidates.
-        </div>
-        <div class="achievement">
-            JEE Mains 2021: Ranked in the <strong>top 0.73%</strong> among 1,050,000 candidates.
-        </div>
-
-        <div class="achievement">
-            Recipient of the <a href="https://drive.google.com/file/d/16T6DYZtnQshn9t0Cn3zum0Cz8Grv06X8/view" target="_blank">Panasonic India Scholarship</a> (2021), awarded to 30 IIT students nationwide. 
-            Featured in <a href="https://indiacsr.in/csr-30-students-get-panasonic-ratti-chattr-scholarship-program/" target="_blank">India CSR</a> & 
-            <a href="https://indiaeducationdiary.in/panasonic-india-announces-winners-of-the-seventh-edition-of-its-flagship-ratti-chattr-scholarship-program/" target="_blank">India Education Diary</a>.
-        </div>
-
-        <div class="achievement">
-            <a href="https://drive.google.com/file/d/1F1-6wX4oxERHJEnALWCfvfqMB7HZ7oeg/view?usp=drive_link" target="_blank">3rd Best Presentation Award</a> at Ganitham 2022 (University of Delhi).
-        </div>
-
-        <div class="achievement">
-            Secured the 3rd highest marks at the state level in the Telangana State 12th Board Exam.
-        </div>
-    </div>
-</section> -->
-
-
-    <!-- Ongoing Research Section
-    <section id="research">
-        <h2>Ongoing Research</h2>
-        <div class="card">
-            <h3>GPU Programming: Accelerating Algorithms with Parallelism</h3>
-            <p>
-                Our research focuses on accelerating well-known algorithms by harnessing the power of <strong>GPU parallelism</strong>.
-                We are focusing on optimizing reduction operations for large arrays (size ≥ 10<sup>8</sup>) using <strong>CUDA programming</strong>, already achieving an impressive <strong>18% speedup</strong> compared to NVIDIA’s Thrust library.  
-                This performance gain was made possible through innovative strategies, and we are excited to publish our findings in upcoming research papers. 📄
-            </p>
-            <p>
-                Currently, we are working on optimizing the SSSP implementation on GPU's on static and dynamic setting and also the <strong>PageRank algorithm</strong>, pushing the boundaries of <strong>high-performance computing</strong> on GPUs. 💡  
-            </p>
-
-            Part-1 : https://www.youtube.com/watch?v=L7HsUBueghg
-            Part-2 : https://www.youtube.com/watch?v=yqO2rcHplB8&t=1s
-
-
-
-        </div>
-    </section> -->
-
-<!-- Ongoing Research Section -->
-<section id="research" class="section">
-    <h2 class="section-title">Ongoing Research</h2>
-    
-    <div class="card research-card">
-        <div class="card-content">
-            <h3 class="card-title">GPU Programming: Accelerating Algorithms with Parallelism</h3>
-            
-            <div class="card-text">
-                <p>
-                    Our research focuses on accelerating well-known algorithms by harnessing the power of <strong>GPU parallelism</strong>.
-                    We are optimizing reduction operations for large arrays (size ≥ 10<sup>8</sup>) using <strong>CUDA programming</strong>, 
-                    achieving an <strong>18% speedup</strong> compared to NVIDIA's Thrust library. These gains come from innovative strategies 
-                    we're excited to publish in upcoming papers. 📄
-                </p>
+        <div class="card research-card">
+            <div class="card-content">
+                <h3 class="card-title">GPU Programming: Accelerating Algorithms with Parallelism</h3>
                 
-                <p>
-                    Current work includes optimizing SSSP implementations on GPUs (static and dynamic settings) and advancing the 
-                    PageRank algorithm through <strong>high-performance computing</strong> techniques. 💡
-                </p>
-            </div>
-
-            <div class="video-grid">
-                <div class="video-group">
-                    <h4 class="video-title">Part I: Core Foundations</h4>
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/L7HsUBueghg" 
-                                title="GPU Research Part I" 
-                                allowfullscreen
-                                class="responsive-iframe">
-                        </iframe>
-                    </div>
-                    <div class="video-keywords">
-                        <span>GPGPU</span>
-                        <span>SIMT</span>
-                        <span>SIMD</span>
-                        <span>PageRank</span>
-                        <span>Reduction</span>
-                        <span>Thrust</span>
-                        <span>CSR</span>
-                        <span>PageRankContribution(PRC)</span>
-                        <span>Sequential Consistency</span>
-                    </div>
-
+                <div class="card-text">
+                    <p>
+                        Our research focuses on accelerating well-known algorithms by harnessing the power of <strong>GPU parallelism</strong>.
+                        We are optimizing reduction operations for large arrays (size ≥ 10<sup>8</sup>) using <strong>CUDA programming</strong>, 
+                        achieving an <strong>18% speedup</strong> compared to NVIDIA's Thrust library. These gains come from innovative strategies 
+                        we're excited to publish in upcoming papers. 📄
+                    </p>
+                    
+                    <p>
+                        Current work includes optimizing SSSP implementations on GPUs (static and dynamic settings) and advancing the 
+                        PageRank algorithm through <strong>high-performance computing</strong> techniques. 💡
+                    </p>
                 </div>
 
-                <div class="video-group">
-                    <h4 class="video-title">Part II: Advanced Implementations</h4>
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/yqO2rcHplB8" 
-                                title="GPU Research Part II" 
-                                allowfullscreen
-                                class="responsive-iframe">
-                        </iframe>
-                    </div>
-                    <div class="video-keywords">
-                        <span>GPGPU</span>
-                        <span>SIMT</span>
-                        <span>SSSP</span>
-                        <span>Thrust/CUB</span>
-                        <span>Static/Dynamic Graphs</span>
-                        <span>Sparse/Dense Graphs</span>
-                        <span>Coarse/Fine-grained Parallelism</span>
-                        <span>Grid/Block/Warp-strides</span>
-                        <span>Memory/Execution Analysis</span>
-                        <span>Edge List/CSR/Adjacency Lists</span>
-                        <span>Reduction</span>
-                        <span>Dot Product</span>
-                        <span>Norms</span>
-                        <span>Warp Level Primitives</span>
+                <div class="video-grid">
+                    <div class="video-group">
+                        <h4 class="video-title">Part I: Core Foundations</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/L7HsUBueghg" 
+                                    title="GPU Research Part I" 
+                                    allowfullscreen
+                                    class="responsive-iframe">
+                            </iframe>
+                        </div>
+                        <div class="video-keywords">
+                            <span>GPGPU</span>
+                            <span>SIMT</span>
+                            <span>SIMD</span>
+                            <span>PageRank</span>
+                            <span>Reduction</span>
+                            <span>Thrust</span>
+                            <span>CSR</span>
+                            <span>PageRankContribution(PRC)</span>
+                            <span>Sequential Consistency</span>
+                        </div>
+
                     </div>
 
+                    <div class="video-group">
+                        <h4 class="video-title">Part II: Advanced Implementations</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/yqO2rcHplB8" 
+                                    title="GPU Research Part II" 
+                                    allowfullscreen
+                                    class="responsive-iframe">
+                            </iframe>
+                        </div>
+                        <div class="video-keywords">
+                            <span>GPGPU</span>
+                            <span>SIMT</span>
+                            <span>SSSP</span>
+                            <span>Thrust/CUB</span>
+                            <span>Static/Dynamic Graphs</span>
+                            <span>Sparse/Dense Graphs</span>
+                            <span>Coarse/Fine-grained Parallelism</span>
+                            <span>Grid/Block/Warp-strides</span>
+                            <span>Memory/Execution Analysis</span>
+                            <span>Edge List/CSR/Adjacency Lists</span>
+                            <span>Reduction</span>
+                            <span>Dot Product</span>
+                            <span>Norms</span>
+                            <span>Warp Level Primitives</span>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-
+    </section>
     <style>
-    /* .research-card {
-        max-width: 1200px;
-        margin: 2rem auto;
-        overflow: hidden;
-    } */
-
     .video-grid {
         display: grid;
         gap: 2rem;
@@ -492,10 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .video-title {
             font-size: 1em;
         }
-    }
 
-    /* Mobile Layout */
-    @media (max-width: 767px) {
         .research-card {
             margin: 1rem;
         }
@@ -504,10 +379,7 @@ document.addEventListener("DOMContentLoaded", function () {
             gap: 1.5rem;
         }
     }
-    </style>
-    <style>
-        /* Add these new styles */
-        .video-keywords {
+    .video-keywords {
             font-size: 0.85rem;
             color: #666;
             margin: 0.5rem 0 1rem;
@@ -534,14 +406,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 font-size: 0.75rem;
                 padding: 0.1rem 0.4rem;
             }
-        }
-        
-
-        
-        .video-grid {
-            display: grid;
-            gap: 2rem;
-            margin-top: 1.5rem;
         }
     </style>
 
@@ -593,8 +457,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
           Back to Top ↑
         </button>
-      </footer>
-      
+    </footer>
+    
 </body>
 
 </html>
