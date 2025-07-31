@@ -1,7 +1,7 @@
 // Profile links array
 const sliceLinks = [
 'https://leetcode.com/u/__sandeep9723__/',
-'https://www.codechef.com/users/sandeep_iitpkd',
+'https://www.codechef.com/users/sandeep_wh',
 'https://www.geeksforgeeks.org/user/sandeepchtiyn/',
 'https://www.naukri.com/code360/profile/Sandeep_reddy'
 ];
